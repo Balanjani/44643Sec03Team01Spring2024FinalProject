@@ -9,7 +9,7 @@
 #### Role: Database
 #### Responsibilities: Working on the API's.
 ### Srinivas Mane:
-#### Role: Frontend
+#### Role: Frontend, Project Manger
 #### Responsibilities: Designing the application’s UI using Auto Layout.
 ### Tarun Yada:
 #### Role: Backend
