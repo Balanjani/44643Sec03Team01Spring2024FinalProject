@@ -1,7 +1,7 @@
 # 44643Sec03Team01Spring2024FinalProject
 
 # Project Name: MunchMap
-The app is a food tracker designed to help users monitor their dietary habits, caloric intake, and nutritional content of their meals. This requires developing a unified platform that smoothly blends nutrition components to help people achieve their health and well-being objectives. The app's goal is to provide users with individualized tools and information to help them optimize their nutritional habits.
+The application functions as a food tracker to assist users in keeping tabs on their eating patterns, caloric consumption, and meal composition. This calls for the creation of a single platform that seamlessly combines nutrition-related elements to assist people in reaching their goals for health and wellbeing. The app's objective is to give users personalized resources and knowledge to support them in improving their eating habits
 
 ## Roles and Responsibilities of each member
 
