@@ -17,8 +17,8 @@ The application functions as a food tracker to assist users in keeping tabs on t
 
 ## SPRINT 02:
 ### Balanjani Kamasani  
-Illustrated a outline desing of the Munch Map app.
+Illustrated a outline design of the Munch Map app.
 ### Srinivas Mane 
-I had Completed explation of illustrated design as document.
+I had Completed explanation of illustrated design as document.
 ### Tarun Yada
-I had categorized the desing and functionaliuties.
+I had categorized the desing and functionalities.
