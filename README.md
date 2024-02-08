@@ -16,8 +16,8 @@ The application functions as a food tracker to assist users in keeping tabs on t
 #### Responsibilities: Designing the models of the app using enums, structs, and classes. Data Management, Server – side management, API Development, Performance Optimization, Security.
 
 ## SPRINT 02:
-### Balanjani Kamasani created a visual representation of the Munch Map app's outline.
+#### Balanjani Kamasani created a visual representation of the Munch Map app's outline.
 
-### Srinivas Mane has finished explaining the illustrated design in a document.
+#### Srinivas Mane has finished explaining the illustrated design in a document.
 
-### Tarun Yada categorized the design and its functionalities.
+#### Tarun Yada categorized the design and its functionalities.
