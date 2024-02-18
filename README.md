@@ -15,7 +15,7 @@ The application functions as a food tracker to assist users in keeping tabs on t
 #### Role: Backend
 #### Responsibilities: Designing the models of the app using enums, structs, and classes. Data Management, Server – side management, API Development, Performance Optimization, Security.
 
-## SPRINT 02:
+## SPRINT 03:
 #### Balanjani Kamasani created a visual representation of the Munch Map app's outline.
 
 #### Srinivas Mane has finished explaining the illustrated design in a document.
