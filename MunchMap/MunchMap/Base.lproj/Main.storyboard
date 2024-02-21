@@ -60,6 +60,9 @@
                                         <rect key="frame" x="139.66666666666666" y="454" width="74" height="34.333333333333314"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="LOGIN"/>
+                                        <connections>
+                                            <action selector="loginBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zjJ-SY-MPn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92I-nL-z7M">
                                         <rect key="frame" x="96.666666666666686" y="549.33333333333337" width="160" height="34.333333333333371"/>
@@ -68,12 +71,18 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
                                             <backgroundConfiguration key="background"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="forgotpasswordBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KxQ-wk-5s4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAB-bW-hte">
                                         <rect key="frame" x="100.00000000000001" y="644.66666666666663" width="153.33333333333337" height="34.333333333333371"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Signup / Register"/>
+                                        <connections>
+                                            <action selector="signupBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5aJ-SR-yG3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -101,6 +110,8 @@
                     </view>
                     <connections>
                         <outlet property="launchLAV" destination="r2z-y1-Xqn" id="YrI-Xa-m9g"/>
+                        <outlet property="passwordTF" destination="5uT-gw-3Nu" id="tO4-Ye-A8V"/>
+                        <outlet property="usernameTF" destination="5z2-8e-tQ8" id="se4-rA-nam"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

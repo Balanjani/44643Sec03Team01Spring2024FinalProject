@@ -19,6 +19,14 @@ class Munchmap: UIViewController {
             }
         }
     }
+    @IBOutlet weak var usernameTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBAction func loginBTN(_ sender: Any) {
+    }
+    @IBAction func forgotpasswordBTN(_ sender: Any) {
+    }
+    @IBAction func signupBTN(_ sender: Any) {
+    }
     
 
     
