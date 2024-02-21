@@ -16,6 +16,8 @@
 		8F6C479D2B82CB7E004E6C00 /* MunchMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C479C2B82CB7E004E6C00 /* MunchMapTests.swift */; };
 		8F6C47A72B82CB7E004E6C00 /* MunchMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C47A62B82CB7E004E6C00 /* MunchMapUITests.swift */; };
 		8F6C47A92B82CB7E004E6C00 /* MunchMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C47A82B82CB7E004E6C00 /* MunchMapUITestsLaunchTests.swift */; };
+		A5DB73232B843BC5004CC529 /* Munchmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DB73222B843BC5004CC529 /* Munchmap.swift */; };
+		A5DB73262B843CC2004CC529 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A5DB73252B843CC2004CC529 /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		8F6C47A22B82CB7E004E6C00 /* MunchMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MunchMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F6C47A62B82CB7E004E6C00 /* MunchMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MunchMapUITests.swift; sourceTree = "<group>"; };
 		8F6C47A82B82CB7E004E6C00 /* MunchMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MunchMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A5DB73222B843BC5004CC529 /* Munchmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Munchmap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5DB73262B843CC2004CC529 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +106,7 @@
 				8F6C47852B82CB7A004E6C00 /* AppDelegate.swift */,
 				8F6C47872B82CB7A004E6C00 /* SceneDelegate.swift */,
 				8F6C47892B82CB7A004E6C00 /* ViewController.swift */,
+				A5DB73222B843BC5004CC529 /* Munchmap.swift */,
 				8F6C478B2B82CB7A004E6C00 /* Main.storyboard */,
 				8F6C478E2B82CB7D004E6C00 /* Assets.xcassets */,
 				8F6C47902B82CB7D004E6C00 /* LaunchScreen.storyboard */,
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = MunchMap;
+			packageProductDependencies = (
+				A5DB73252B843CC2004CC529 /* Lottie */,
+			);
 			productName = MunchMap;
 			productReference = 8F6C47822B82CB7A004E6C00 /* MunchMap.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 8F6C47792B82CB7A004E6C00;
+			packageReferences = (
+				A5DB73242B843CC2004CC529 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 8F6C47832B82CB7A004E6C00 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,6 +271,7 @@
 			files = (
 				8F6C478A2B82CB7A004E6C00 /* ViewController.swift in Sources */,
 				8F6C47862B82CB7A004E6C00 /* AppDelegate.swift in Sources */,
+				A5DB73232B843BC5004CC529 /* Munchmap.swift in Sources */,
 				8F6C47882B82CB7A004E6C00 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +613,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A5DB73242B843CC2004CC529 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A5DB73252B843CC2004CC529 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5DB73242B843CC2004CC529 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8F6C477A2B82CB7A004E6C00 /* Project object */;
 }

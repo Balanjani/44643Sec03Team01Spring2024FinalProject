@@ -5,13 +5,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Munchmap-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MunchMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Munchmap" customModule="MunchMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,16 +81,27 @@
                                     <constraint firstItem="qC4-1w-flf" firstAttribute="width" secondItem="ZVs-1B-gWR" secondAttribute="width" id="7Yy-ie-yS0"/>
                                 </constraints>
                             </stackView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2z-y1-Xqn" userLabel="launchLAV" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.1124205366" green="0.449460268" blue="0.30684405570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZVs-1B-gWR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0J2-eQ-qXn"/>
+                            <constraint firstItem="r2z-y1-Xqn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="BzN-ox-JFl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZVs-1B-gWR" secondAttribute="bottom" constant="60" id="CLl-hc-Ty3"/>
+                            <constraint firstItem="r2z-y1-Xqn" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="If3-eY-Sk0"/>
+                            <constraint firstItem="r2z-y1-Xqn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JCR-XB-ISJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZVs-1B-gWR" secondAttribute="trailing" constant="20" id="Yak-Q3-tgO"/>
                             <constraint firstItem="ZVs-1B-gWR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="dKA-SI-ABp"/>
+                            <constraint firstItem="r2z-y1-Xqn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lte-lJ-ebr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="launchLAV" destination="r2z-y1-Xqn" id="YrI-Xa-m9g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,6 +109,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="2004" height="2048"/>
+        <image name="logo" width="668" height="682.66668701171875"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
