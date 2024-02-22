@@ -9,6 +9,9 @@ import UIKit
 import Lottie
 
 class Munchmap: UIViewController {
+    
+    
+    
     @IBOutlet weak var launchLAV: LottieAnimationView!{
         didSet{
             launchLAV.animation = .named("munchmap")
@@ -19,6 +22,7 @@ class Munchmap: UIViewController {
             }
         }
     }
+    
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBAction func loginBTN(_ sender: Any) {
@@ -28,13 +32,17 @@ class Munchmap: UIViewController {
     @IBAction func signupBTN(_ sender: Any) {
     }
     
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // Set up secure text entry for the password text field
+        passwordTF.isSecureTextEntry = true
+        
+        // Clear text fields
+        usernameTF.text = ""
+        passwordTF.text = ""
+       
     }
     
 
