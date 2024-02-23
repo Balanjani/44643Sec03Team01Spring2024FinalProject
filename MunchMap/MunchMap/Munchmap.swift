@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+import Foundation
 
 class Munchmap: UIViewController {
     
@@ -26,23 +27,41 @@ class Munchmap: UIViewController {
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBAction func loginBTN(_ sender: Any) {
+        validEmail()
     }
     @IBAction func forgotpasswordBTN(_ sender: Any) {
     }
     @IBAction func signupBTN(_ sender: Any) {
     }
+    @IBOutlet weak var Message: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // Set up secure text entry for the password text field
         passwordTF.isSecureTextEntry = true
+        
         
         // Clear text fields
         usernameTF.text = ""
         passwordTF.text = ""
        
+    }
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let result = email.range(of: emailRegex, options: .regularExpression)
+            return result != nil
+    }
+
+    // Usage example
+    
+    private func validEmail(){
+        let email = "example@example.com"
+        if !isValidEmail(email) {
+            Message.text = "Invalid email address"
+        }
     }
     
 
