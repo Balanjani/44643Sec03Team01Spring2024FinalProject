@@ -90,7 +90,9 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Signup / Register"/>
                                                 <connections>
-                                                    <action selector="signupBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5aJ-SR-yG3"/>
+                                                    <segue destination="e6N-GG-7EL" kind="popoverPresentation" popoverAnchorView="hAB-bW-hte" id="gaQ-zd-cwd">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -134,17 +136,17 @@
             <objects>
                 <viewController id="e6N-GG-7EL" userLabel="registerSn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7H1-kb-mh7">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="386-Kx-6fd" userLabel="BigContainerSV">
-                                <rect key="frame" x="20" y="79" width="353" height="733"/>
+                                <rect key="frame" x="20" y="20" width="353" height="782"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="1TS-rB-5H8">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="220"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="234.66666666666666"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PsZ-oH-kuo" userLabel="PersonalInfo">
-                                        <rect key="frame" x="0.0" y="228" width="353" height="505"/>
+                                        <rect key="frame" x="0.0" y="242.66666666666669" width="353" height="539.33333333333326"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TWo-pB-Ybv" userLabel="FirstnameSV">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
@@ -163,7 +165,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dV7-hF-01M" userLabel="LastnameSV">
-                                                <rect key="frame" x="0.0" y="76.666666666666686" width="353" height="34"/>
+                                                <rect key="frame" x="0.0" y="82" width="353" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz7-jA-8Ya">
                                                         <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="34"/>
@@ -179,7 +181,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KbJ-XC-5yo" userLabel="GmailSV">
-                                                <rect key="frame" x="0.0" y="153.66666666666669" width="353" height="34"/>
+                                                <rect key="frame" x="0.0" y="164" width="353" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gmail ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kL2-wg-Cyq">
                                                         <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="34"/>
@@ -195,7 +197,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="n2b-xP-gjm" userLabel="PhoneSV">
-                                                <rect key="frame" x="0.0" y="230.33333333333337" width="353" height="34"/>
+                                                <rect key="frame" x="0.0" y="246.33333333333331" width="353" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWp-mt-Cog">
                                                         <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="34"/>
@@ -211,7 +213,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lwl-cN-yxm" userLabel="passwordSV">
-                                                <rect key="frame" x="0.0" y="307.33333333333337" width="353" height="34"/>
+                                                <rect key="frame" x="0.0" y="328.33333333333331" width="353" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2X-hn-Gxi">
                                                         <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="34"/>
@@ -227,7 +229,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SMb-GK-sLx" userLabel="confirmpsdSV">
-                                                <rect key="frame" x="0.0" y="384.33333333333337" width="353" height="34"/>
+                                                <rect key="frame" x="0.0" y="410.33333333333331" width="353" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4B-QT-exi">
                                                         <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="34"/>
@@ -243,10 +245,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QYF-Ed-zY6" userLabel="SignupSV">
-                                                <rect key="frame" x="0.0" y="461" width="353" height="44"/>
+                                                <rect key="frame" x="0.0" y="492.33333333333326" width="353" height="47"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xss-oq-0f8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="44"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="47"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="signup" cornerStyle="capsule"/>
                                                     </button>
