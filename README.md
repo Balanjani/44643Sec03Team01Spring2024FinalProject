@@ -1,6 +1,6 @@
-# 44643Sec03Team01Spring2024FinalProject
+## 44643Sec03Team01Spring2024FinalProject
 
-# Project Name: MunchMap
+## Project Name: MunchMap
 The application functions as a food tracker to assist users in keeping tabs on their eating patterns, caloric consumption, and meal composition. This calls for the creation of a single platform that seamlessly combines nutrition-related elements to assist people in reaching their goals for health and wellbeing. The app's objective is to give users personalized resources and knowledge to support them in improving their eating habits
 
 ## Roles and Responsibilities of each member
@@ -16,8 +16,27 @@ The application functions as a food tracker to assist users in keeping tabs on t
 #### Responsibilities: Designing the models of the app using enums, structs, and classes. Data Management, Server – side management, API Development, Performance Optimization, Security.
 
 ## SPRINT 03:
-#### Balanjani Kamasani created a visual representation of the Munch Map app's outline.
 
-#### Srinivas Mane has finished explaining the illustrated design in a document.
+## Login Screen Implementation:
 
-#### Tarun Yada categorized the design and its functionalities.
+### Objective: Develop a secure and user-friendly login screen for authenticating users.
+#### Achievements:
+##### Implemented a UI with fields for username/email and password.
+##### Provided outlets for the UI elements on the login screen to facilitate seamless communication with the underlying code.
+##### Added the functionality for the username field on the login screen.
+##### Added secure text entry for the password field to enhance user privacy.
+
+## Register Screen Development:
+
+### Objective: Create a registration screen to allow new users to sign up.
+#### Achievements:
+##### Designed an intuitive registration form with fields for essential user information.
+##### Established connections between the login screen's UI elements and the underlying code by creating outlets for seamless communication.
+
+## User Personal Info Screen Enhancement:
+
+### Objective: Improve the user personal info screen, enabling users to manage and view their profile information.
+#### Achievements:
+##### Expanded the existing UI to include additional user details.
+##### Enabled users to edit and update their personal information.
+
