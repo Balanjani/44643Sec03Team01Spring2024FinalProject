@@ -71,6 +71,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="LOGIN" cornerStyle="capsule" titleAlignment="center"/>
                                                 <connections>
                                                     <action selector="loginBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zjJ-SY-MPn"/>
+                                                    <action selector="loginMpBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TTk-j5-5uz"/>
                                                     <segue destination="ywu-nq-OFN" kind="show" id="pv8-cK-CHk"/>
                                                 </connections>
                                             </button>
@@ -82,6 +83,7 @@
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                                 <connections>
+                                                    <action selector="forgotPsdMpBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mmr-EF-I28"/>
                                                     <action selector="forgotpasswordBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KxQ-wk-5s4"/>
                                                 </connections>
                                             </button>
@@ -91,6 +93,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Signup / Register"/>
                                                 <connections>
+                                                    <action selector="signupRegMpBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qvQ-Ny-WiP"/>
                                                     <segue destination="e6N-GG-7EL" kind="popoverPresentation" popoverAnchorView="hAB-bW-hte" id="gaQ-zd-cwd">
                                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                                     </segue>
@@ -239,7 +242,7 @@
         <!--registerSn-->
         <scene sceneID="6mU-8u-Eaj">
             <objects>
-                <viewController id="e6N-GG-7EL" userLabel="registerSn" sceneMemberID="viewController">
+                <viewController id="e6N-GG-7EL" userLabel="registerSn" customClass="Munchmap" customModule="MunchMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7H1-kb-mh7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -356,6 +359,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="353" height="47"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="signup" cornerStyle="capsule"/>
+                                                        <connections>
+                                                            <action selector="signupRgBTN:" destination="e6N-GG-7EL" eventType="touchUpInside" id="LzT-rx-pKa"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -377,6 +383,14 @@
                             <constraint firstItem="386-Kx-6fd" firstAttribute="leading" secondItem="mOu-V9-LxZ" secondAttribute="leading" constant="20" id="fv5-cq-CLC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="confrimPsdRgTF" destination="NvD-r3-S8u" id="1xm-nL-PfE"/>
+                        <outlet property="firstNameRgTF" destination="4Vm-sT-aS5" id="Lxh-Ov-h4Y"/>
+                        <outlet property="gmailRgTF" destination="1eT-dh-heF" id="Axb-jW-7gd"/>
+                        <outlet property="lastNameRgTF" destination="7sM-jb-8u4" id="4yH-nU-Oll"/>
+                        <outlet property="passwordRgTF" destination="ltQ-hL-wv1" id="4pi-RY-t8P"/>
+                        <outlet property="phoneNoRgTF" destination="ltQ-hL-wv1" id="yh0-4I-Hhc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uk5-x5-Bdy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

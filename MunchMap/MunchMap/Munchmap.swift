@@ -35,20 +35,73 @@ class Munchmap: UIViewController {
     }
     @IBOutlet weak var Message: UILabel!
     
+    @IBOutlet weak var firstNameRgTF: UITextField!
+    
+    @IBOutlet weak var lastNameRgTF: UITextField!
+    
+    @IBOutlet weak var gmailRgTF: UITextField!
+    
+    @IBOutlet weak var phoneNoRgTF: UITextField!
+    
+    @IBOutlet weak var passwordRgTF: UITextField!
+    
+    @IBOutlet weak var confrimPsdRgTF: UITextField!
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         // Set up secure text entry for the password text field
+        
         passwordTF.isSecureTextEntry = true
+        
         
         
         // Clear text fields
         usernameTF.text = ""
         passwordTF.text = ""
+        
        
     }
+    
+    @IBAction func loginMpBTN(_ sender: UIButton) {
+    }
+    
+    @IBAction func forgotPsdMpBTN(_ sender: UIButton) {
+    }
+    
+    @IBAction func signupRegMpBTN(_ sender: UIButton) {
+    }
+    
+    @IBAction func signupRgBTN(_ sender: UIButton) {
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     func isValidEmail(_ email: String) -> Bool {
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let result = email.range(of: emailRegex, options: .regularExpression)
