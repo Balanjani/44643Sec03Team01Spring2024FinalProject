@@ -26,13 +26,6 @@ class Munchmap: UIViewController {
     
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    @IBAction func loginBTN(_ sender: Any) {
-        validEmail()
-    }
-    @IBAction func forgotpasswordBTN(_ sender: Any) {
-    }
-    @IBAction func signupBTN(_ sender: Any) {
-    }
     @IBOutlet weak var Message: UILabel!
     
     @IBOutlet weak var firstNameRgTF: UITextField!
@@ -75,6 +68,7 @@ class Munchmap: UIViewController {
     }
     
     @IBAction func loginMpBTN(_ sender: UIButton) {
+        validEmail()
     }
     
     @IBAction func forgotPsdMpBTN(_ sender: UIButton) {
