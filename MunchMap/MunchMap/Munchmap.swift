@@ -48,7 +48,17 @@ class Munchmap: UIViewController {
     
     @IBOutlet weak var weightUISTF: UITextField!
     
+    @IBOutlet weak var loginOtMpBTN: UIButton!
     
+    @IBOutlet weak var eatenPVOlt: UIProgressView!
+    
+    @IBOutlet weak var remainingPVOlt: UIProgressView!
+    
+    @IBOutlet weak var fatPVOlt: UIProgressView!
+    
+    @IBOutlet weak var crabsPVOlt: UIProgressView!
+   
+    @IBOutlet weak var protienPVOtl: UIProgressView!
     
     
     
@@ -57,16 +67,16 @@ class Munchmap: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         // Set up secure text entry for the password text field
         
-        passwordTF.isSecureTextEntry = true
+        // passwordTF.isSecureTextEntry = true
         
+    
         
         
         // Clear text fields
-        usernameTF.text = ""
-        passwordTF.text = ""
+        // usernameTF.text = ""
+        // passwordTF.text = ""
         
        
     }
