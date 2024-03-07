@@ -40,9 +40,13 @@ class Munchmap: UIViewController {
     
     @IBOutlet weak var confrimPsdRgTF: UITextField!
     
+    @IBOutlet weak var GenderpickerUISC: UIPickerView!
     
+    @IBOutlet weak var AgeUISTF: UITextField!
     
+    @IBOutlet weak var heightUISTF: UITextField!
     
+    @IBOutlet weak var weightUISTF: UITextField!
     
     
     
@@ -81,6 +85,8 @@ class Munchmap: UIViewController {
         
     }
     
+    @IBAction func submitUISBTN(_ sender: UIButton) {
+    }
     
     
     
