@@ -69,15 +69,14 @@ class Munchmap: UIViewController {
         
         // Set up secure text entry for the password text field
         
-        // passwordTF.isSecureTextEntry = true
-        
-    
-        
+        passwordTF.isSecureTextEntry = true
         
         // Clear text fields
-        // usernameTF.text = ""
-        // passwordTF.text = ""
-        
+        usernameTF.text = ""
+        passwordTF.text = ""
+        AgeUISTF.text = ""
+        heightUISTF.text = ""
+        weightUISTF.text = ""
        
     }
     
