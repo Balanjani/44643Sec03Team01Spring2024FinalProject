@@ -40,3 +40,7 @@ The application functions as a food tracker to assist users in keeping tabs on t
 ##### Expanded the existing UI to include additional user details.
 ##### Enabled users to edit and update their personal information.
 
+## SPRINT 04:
+
+### Objective: Implemented functionalities for Login page and created a UI screen of Munchmap Progress Screen
+
