@@ -69,10 +69,10 @@ class Munchmap: UIViewController {
         
         // Set up secure text entry for the password text field
         
-        passwordTF.isSecureTextEntry = true
+        //passwordTF.isSecureTextEntry = true
         
         // Clear text fields
-        usernameTF.text = ""
+        //usernameTF.text = ""
         passwordTF.text = ""
         AgeUISTF.text = ""
         heightUISTF.text = ""
@@ -81,7 +81,7 @@ class Munchmap: UIViewController {
     }
     
     @IBAction func loginMpBTN(_ sender: UIButton) {
-        validEmail()
+        //if let email = usernameTF.text
     }
     
     @IBAction func forgotPsdMpBTN(_ sender: UIButton) {
@@ -111,20 +111,20 @@ class Munchmap: UIViewController {
     
     
     
-    func isValidEmail(_ email: String) -> Bool {
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let result = email.range(of: emailRegex, options: .regularExpression)
-            return result != nil
-    }
+   
 
     // Usage example
     
-    private func validEmail(){
-        let email = "example@example.com"
-        if !isValidEmail(email) {
-            Message.text = "Invalid email address"
-        }
+     func validateEmailId() -> Bool {
+             let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+             return applyPredicateOnRegex(regexStr: emailRegEx)
     }
+    func applyPredicateOnRegex(regexStr: String) -> Bool{
+            let trimmedString = ""
+            let validateOtherString = NSPredicate(format: "SELF MATCHES %@", regexStr)
+            let isValidateOtherString = validateOtherString.evaluate(with: trimmedString)
+            return isValidateOtherString
+        }
     
 
     /*
