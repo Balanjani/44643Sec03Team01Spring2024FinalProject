@@ -8,6 +8,7 @@
 import UIKit
 import Lottie
 import Foundation
+import SwiftUI
 
 class Munchmap: UIViewController {
     
@@ -57,7 +58,7 @@ class Munchmap: UIViewController {
     @IBOutlet weak var fatPVOlt: UIProgressView!
     
     @IBOutlet weak var crabsPVOlt: UIProgressView!
-   
+    
     @IBOutlet weak var protienPVOtl: UIProgressView!
     
     
@@ -69,19 +70,20 @@ class Munchmap: UIViewController {
         
         // Set up secure text entry for the password text field
         
-        //passwordTF.isSecureTextEntry = true
+        passwordTF.isSecureTextEntry = true
         
         // Clear text fields
-        //usernameTF.text = ""
+        usernameTF.text = ""
         passwordTF.text = ""
         AgeUISTF.text = ""
         heightUISTF.text = ""
         weightUISTF.text = ""
-       
+        
     }
     
     @IBAction func loginMpBTN(_ sender: UIButton) {
         //if let email = usernameTF.text
+        validCode()
     }
     
     @IBAction func forgotPsdMpBTN(_ sender: UIButton) {
@@ -111,30 +113,40 @@ class Munchmap: UIViewController {
     
     
     
-   
-
+    
+    
     // Usage example
     
-     func validateEmailId() -> Bool {
-             let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
-             return applyPredicateOnRegex(regexStr: emailRegEx)
+    func validateEmailId() -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        return applyPredicateOnRegex(regexStr: emailRegEx)
     }
     func applyPredicateOnRegex(regexStr: String) -> Bool{
-            let trimmedString = ""
-            let validateOtherString = NSPredicate(format: "SELF MATCHES %@", regexStr)
-            let isValidateOtherString = validateOtherString.evaluate(with: trimmedString)
-            return isValidateOtherString
-        }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let trimmedString = ""
+        let validateOtherString = NSPredicate(format: "SELF MATCHES %@", regexStr)
+        let isValidateOtherString = validateOtherString.evaluate(with: trimmedString)
+        return isValidateOtherString
     }
-    */
+    func validCode(){
+        if usernameTF.text != nil{
+            if !validateEmailId(){
+                _ = UIAlertController(title: "Alert", message: "Email address not found.", preferredStyle: .alert)
 
+            }
+        } else {
+            
+        }
+        
+        
+        /*
+         // MARK: - Navigation
+         
+         // In a storyboard-based application, you will often want to do a little preparation before navigation
+         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         // Get the new view controller using segue.destination.
+         // Pass the selected object to the new view controller.
+         }
+         */
+        
+    }
 }
