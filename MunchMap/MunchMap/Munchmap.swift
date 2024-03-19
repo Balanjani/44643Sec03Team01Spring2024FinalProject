@@ -70,20 +70,39 @@ class Munchmap: UIViewController {
         
         // Set up secure text entry for the password text field
         
-        passwordTF.isSecureTextEntry = true
-        
+        //passwordTF.isSecureTextEntry = true
+         
         // Clear text fields
-        usernameTF.text = ""
-        passwordTF.text = ""
-        AgeUISTF.text = ""
-        heightUISTF.text = ""
-        weightUISTF.text = ""
+        //usernameTF.text = ""
+        //passwordTF.text = ""
+        //AgeUISTF.text = ""
+        //heightUISTF.text = ""
+        //weightUISTF.text = ""
         
     }
     
+    @IBAction func UserNameValue(_ sender: Any) {
+        if let Username = usernameTF.text{
+            if let message = inValidEmail(Username){
+                Message.text = message
+                Message.isHidden = false
+            }
+            else
+                
+            {
+                Message.isHidden = true
+            }
+        }
+        checkvalid()
+    }
+    
+    @IBAction func PasswordValue(_ sender: Any) {
+        
+    }
     @IBAction func loginMpBTN(_ sender: UIButton) {
         //if let email = usernameTF.text
-        validCode()
+        //validCode()
+        resetForm()
     }
     
     @IBAction func forgotPsdMpBTN(_ sender: UIButton) {
@@ -114,13 +133,39 @@ class Munchmap: UIViewController {
     
     
     
-    
-    // Usage example
-    
-    func validateEmailId() -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
-        return applyPredicateOnRegex(regexStr: emailRegEx)
+    func resetForm()
+    {
+        loginOtMpBTN.isEnabled = false
+        Message.isHidden = false
+        Message.text = "Required to fill the fields"
+        
+        usernameTF.text = ""
+        passwordTF.text = ""
+        
+        
     }
+    func checkvalid()
+    {
+        if Message.isHidden == true
+        {
+            loginOtMpBTN.isEnabled = true
+        }else{
+            loginOtMpBTN.isEnabled = false
+        }
+    }
+        
+    // Usage example
+    func inValidEmail(_ value: String) -> String?
+    {
+        let emailRegularExp =  "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", emailRegularExp)
+        if !predicate.evaluate(with: value )
+        {
+            return "Invalid Email Address "
+        }
+        return nil
+    }
+    
     func validatePassword(mini: Int = 8, max: Int = 8) -> Bool {
             //Minimum 8 characters at least 1 Alphabet and 1 Number:
             var passRegEx = ""
@@ -137,17 +182,7 @@ class Munchmap: UIViewController {
         let isValidateOtherString = validateOtherString.evaluate(with: trimmedString)
         return isValidateOtherString
     }
-    func validCode(){
-        if usernameTF.text != nil{
-            if !validateEmailId(){
-                _ = UIAlertController(title: "Alert", message: "Email address not found.", preferredStyle: .alert)
-
-            }
-        } else {
-            
-        }
-        
-        
+    
         /*
          // MARK: - Navigation
          
@@ -159,4 +194,4 @@ class Munchmap: UIViewController {
          */
         
     }
-}
+
