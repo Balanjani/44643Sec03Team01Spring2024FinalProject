@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -251,10 +251,10 @@
             </objects>
             <point key="canvasLocation" x="-649.61832061068696" y="19.718309859154932"/>
         </scene>
-        <!--Munchmap-->
+        <!--calorieProgressVC-->
         <scene sceneID="CRq-m9-4t0">
             <objects>
-                <viewController id="KnU-QS-aET" customClass="Munchmap" customModule="MunchMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KnU-QS-aET" userLabel="calorieProgressVC" customClass="calorieProgressVC" customModule="MunchMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kzg-qB-vxf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -457,10 +457,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="4xu-ca-1l5"/>
                     <connections>
-                        <outlet property="crabsPVOlt" destination="k4B-GO-sk9" id="XuT-yU-16a"/>
-                        <outlet property="eatenPVOlt" destination="IJy-bc-Sfs" id="AKo-YG-k7D"/>
-                        <outlet property="protienPVOtl" destination="iU5-0r-Loa" id="7jj-hS-Jlr"/>
-                        <outlet property="remainingPVOlt" destination="u9d-ZX-CdW" id="khX-09-Hkk"/>
+                        <outlet property="CarbsPV" destination="k4B-GO-sk9" id="R5z-iU-Kzy"/>
+                        <outlet property="EatenPV" destination="IJy-bc-Sfs" id="jaT-xF-431"/>
+                        <outlet property="FatPV" destination="4kM-aq-OM5" id="lda-Nh-xYx"/>
+                        <outlet property="ProtienPV" destination="iU5-0r-Loa" id="tgE-ys-h7J"/>
+                        <outlet property="RemainingPV" destination="u9d-ZX-CdW" id="2a6-Ln-LPj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRL-Gw-Cda" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

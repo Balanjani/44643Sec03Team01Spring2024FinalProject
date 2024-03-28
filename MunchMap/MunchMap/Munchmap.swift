@@ -51,15 +51,6 @@ class Munchmap: UIViewController {
     
     @IBOutlet weak var loginOtMpBTN: UIButton!
     
-    @IBOutlet weak var eatenPVOlt: UIProgressView!
-    
-    @IBOutlet weak var remainingPVOlt: UIProgressView!
-    
-    @IBOutlet weak var fatPVOlt: UIProgressView!
-    
-    @IBOutlet weak var crabsPVOlt: UIProgressView!
-    
-    @IBOutlet weak var protienPVOtl: UIProgressView!
     
     
     
@@ -71,7 +62,7 @@ class Munchmap: UIViewController {
         // Set up secure text entry for the password text field
         
         //passwordTF.isSecureTextEntry = true
-         
+        
         // Clear text fields
         //usernameTF.text = ""
         //passwordTF.text = ""
@@ -88,7 +79,7 @@ class Munchmap: UIViewController {
                 Message.isHidden = false
             }
             else
-                
+            
             {
                 Message.isHidden = true
             }
@@ -97,6 +88,18 @@ class Munchmap: UIViewController {
     }
     
     @IBAction func PasswordValue(_ sender: Any) {
+        if let password = passwordTF.text{
+            if let message = inValidPassword(password){
+                Message.text = message
+                Message.isHidden = false
+            }
+            else
+            
+            {
+                Message.isHidden = true
+            }
+        }
+        checkvalid()
         
     }
     @IBAction func loginMpBTN(_ sender: UIButton) {
@@ -153,7 +156,7 @@ class Munchmap: UIViewController {
             loginOtMpBTN.isEnabled = false
         }
     }
-        
+    
     // Usage example
     func inValidEmail(_ value: String) -> String?
     {
@@ -165,24 +168,45 @@ class Munchmap: UIViewController {
         }
         return nil
     }
-    
-    func validatePassword(mini: Int = 8, max: Int = 8) -> Bool {
-            //Minimum 8 characters at least 1 Alphabet and 1 Number:
-            var passRegEx = ""
-            if mini >= max{
-                passRegEx = "^(?=.[A-Za-z])(?=.\\d)[A-Za-z\\d]{\(mini),}$"
-            }else{
-                passRegEx = "^(?=.[A-Za-z])(?=.\\d)[A-Za-z\\d]{\(mini),\(max)}$"
-            }
-            return applyPredicateOnRegex(regexStr: passRegEx)
+    func inValidPassword(_ value: String) -> String?
+    {
+        if value.count < 8
+        {
+            return "Password Must contain at least 8 characters"
         }
-    func applyPredicateOnRegex(regexStr: String) -> Bool{
-        let trimmedString = ""
-        let validateOtherString = NSPredicate(format: "SELF MATCHES %@", regexStr)
-        let isValidateOtherString = validateOtherString.evaluate(with: trimmedString)
-        return isValidateOtherString
-    }
-    
+        if containsDigit(value)
+        {
+            return "Password Must contain at least 1 digit"
+        }
+        if containsLowerCase(value)
+        {
+            return "Password Must contain at least 1 lowercase character"
+        }
+        if containsUpperCase(value)
+        {
+            return "Password Must contain at least 1 uppercase character"
+        }
+        return nil
+        
+        func containsDigit(_ value: String) -> Bool
+        {
+            let psdExpression = ".*[1-9]+.*"
+            let psdpredicate = NSPredicate(format: "SELF MATCHES %@", psdExpression)
+            return !psdpredicate.evaluate(with: value)
+        }
+        func containsLowerCase(_ value: String) -> Bool
+        {
+            let psdExpression = ".*[a-z]+.*"
+            let psdpredicate = NSPredicate(format: "SELF MATCHES %@", psdExpression)
+            return !psdpredicate.evaluate(with: value)
+        }
+        func containsUpperCase(_ value: String) -> Bool
+        {
+            let psdExpression = ".*[A-Z]+.*"
+            let psdpredicate = NSPredicate(format: "SELF MATCHES %@", psdExpression)
+            return !psdpredicate.evaluate(with: value)
+        }
+        
         /*
          // MARK: - Navigation
          
@@ -194,4 +218,4 @@ class Munchmap: UIViewController {
          */
         
     }
-
+}
