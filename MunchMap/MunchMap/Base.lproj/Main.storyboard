@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -717,6 +717,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Uth-uy-SDJ"/>
+                    <connections>
+                        <outlet property="BreakfastOL" destination="A9A-9B-C1x" id="UK2-1l-5xV"/>
+                        <outlet property="DinnerOL" destination="mSY-OG-B6C" id="Fow-a5-7vS"/>
+                        <outlet property="DishNameOL" destination="FxA-5z-BZl" id="4jv-Fv-TMN"/>
+                        <outlet property="DishTFOL" destination="H9G-01-LxH" id="qjH-Ce-TcH"/>
+                        <outlet property="IngredientsOL" destination="iGi-oe-O07" id="NaV-9t-Vuy"/>
+                        <outlet property="IngredientsTFOL" destination="Jf8-LG-xu4" id="vqT-AX-CG9"/>
+                        <outlet property="LunchOL" destination="rdA-aM-taf" id="cNS-tL-L1J"/>
+                        <outlet property="SaveOL" destination="9M4-XH-04v" id="IJM-Ce-0OK"/>
+                        <outlet property="SnacksOL" destination="wel-r9-XJm" id="3Mh-O7-jYj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCJ-OI-yvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

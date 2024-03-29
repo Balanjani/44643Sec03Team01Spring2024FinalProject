@@ -9,6 +9,18 @@ import UIKit
 
 class BreakfastVC: UIViewController {
 
+    @IBOutlet weak var BreakfastOL: UIButton!
+    @IBOutlet weak var LunchOL: UIButton!
+    @IBOutlet weak var SnacksOL: UIButton!
+    @IBOutlet weak var DinnerOL: UIButton!
+    @IBOutlet weak var DishNameOL: UILabel!
+    @IBOutlet weak var DishTFOL: UITextField!
+    @IBOutlet weak var IngredientsOL: UILabel!
+    @IBOutlet weak var IngredientsTFOL: UITextField!
+    @IBOutlet weak var SaveOL: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
