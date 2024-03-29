@@ -9,6 +9,13 @@ import UIKit
 
 class UserInformationVC: UIViewController {
 
+    @IBOutlet weak var AgeTF: UITextField!
+    @IBOutlet weak var HeightTF: UITextField!
+    
+    @IBOutlet weak var WeightTF: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

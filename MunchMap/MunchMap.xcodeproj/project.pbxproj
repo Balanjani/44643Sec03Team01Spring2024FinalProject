@@ -18,6 +18,8 @@
 		8F6C47A72B82CB7E004E6C00 /* MunchMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C47A62B82CB7E004E6C00 /* MunchMapUITests.swift */; };
 		8F6C47A92B82CB7E004E6C00 /* MunchMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C47A82B82CB7E004E6C00 /* MunchMapUITestsLaunchTests.swift */; };
 		8F977D802BB6556F00F56904 /* BreakfastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F977D7F2BB6556F00F56904 /* BreakfastVC.swift */; };
+		A547CF762BB6637E00FD99A1 /* registerSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547CF752BB6637E00FD99A1 /* registerSV.swift */; };
+		A547CF782BB666B300FD99A1 /* UserInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547CF772BB666B300FD99A1 /* UserInformationVC.swift */; };
 		A5DB73232B843BC5004CC529 /* Munchmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DB73222B843BC5004CC529 /* Munchmap.swift */; };
 		A5DB73262B843CC2004CC529 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A5DB73252B843CC2004CC529 /* Lottie */; };
 /* End PBXBuildFile section */
@@ -55,6 +57,8 @@
 		8F6C47A62B82CB7E004E6C00 /* MunchMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MunchMapUITests.swift; sourceTree = "<group>"; };
 		8F6C47A82B82CB7E004E6C00 /* MunchMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MunchMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8F977D7F2BB6556F00F56904 /* BreakfastVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakfastVC.swift; sourceTree = "<group>"; };
+		A547CF752BB6637E00FD99A1 /* registerSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerSV.swift; sourceTree = "<group>"; };
+		A547CF772BB666B300FD99A1 /* UserInformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationVC.swift; sourceTree = "<group>"; };
 		A5DB73222B843BC5004CC529 /* Munchmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Munchmap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +116,8 @@
 				8F6C47892B82CB7A004E6C00 /* ViewController.swift */,
 				A5DB73222B843BC5004CC529 /* Munchmap.swift */,
 				8F6C478B2B82CB7A004E6C00 /* Main.storyboard */,
+				A547CF772BB666B300FD99A1 /* UserInformationVC.swift */,
+				A547CF752BB6637E00FD99A1 /* registerSV.swift */,
 				8F977D7F2BB6556F00F56904 /* BreakfastVC.swift */,
 				70450D872BB51F7200F1045A /* calorieProgressVC.swift */,
 				8F6C478E2B82CB7D004E6C00 /* Assets.xcassets */,
@@ -275,12 +281,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A547CF782BB666B300FD99A1 /* UserInformationVC.swift in Sources */,
 				70450D882BB51F7200F1045A /* calorieProgressVC.swift in Sources */,
 				8F6C478A2B82CB7A004E6C00 /* ViewController.swift in Sources */,
 				8F6C47862B82CB7A004E6C00 /* AppDelegate.swift in Sources */,
 				A5DB73232B843BC5004CC529 /* Munchmap.swift in Sources */,
 				8F977D802BB6556F00F56904 /* BreakfastVC.swift in Sources */,
 				8F6C47882B82CB7A004E6C00 /* SceneDelegate.swift in Sources */,
+				A547CF762BB6637E00FD99A1 /* registerSV.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

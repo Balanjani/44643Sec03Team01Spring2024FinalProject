@@ -9,6 +9,21 @@ import UIKit
 
 class registerSV: UIViewController {
 
+    @IBOutlet weak var firstNameTF: UITextField!
+    
+    @IBOutlet weak var lastNamrTF: UITextField!
+    
+    @IBOutlet weak var gmailTF: UITextField!
+    
+    @IBOutlet weak var phoneNumberTF: UITextField!
+    
+    @IBOutlet weak var passwordTF: UIStackView!
+    
+    @IBOutlet weak var confrimPasswordTF: UITextField!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

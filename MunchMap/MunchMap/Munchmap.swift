@@ -29,46 +29,12 @@ class Munchmap: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var Message: UILabel!
     
-    @IBOutlet weak var firstNameRgTF: UITextField!
-    
-    @IBOutlet weak var lastNameRgTF: UITextField!
-    
-    @IBOutlet weak var gmailRgTF: UITextField!
-    
-    @IBOutlet weak var phoneNoRgTF: UITextField!
-    
-    @IBOutlet weak var passwordRgTF: UITextField!
-    
-    @IBOutlet weak var confrimPsdRgTF: UITextField!
-    
-    @IBOutlet weak var GenderpickerUISC: UIPickerView!
-    
-    @IBOutlet weak var AgeUISTF: UITextField!
-    
-    @IBOutlet weak var heightUISTF: UITextField!
-    
-    @IBOutlet weak var weightUISTF: UITextField!
-    
     @IBOutlet weak var loginOtMpBTN: UIButton!
-    
-    
-    
-    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set up secure text entry for the password text field
-        
-        //passwordTF.isSecureTextEntry = true
-        
-        // Clear text fields
-        //usernameTF.text = ""
-        //passwordTF.text = ""
-        //AgeUISTF.text = ""
-        //heightUISTF.text = ""
-        //weightUISTF.text = ""
         
     }
     
@@ -103,19 +69,21 @@ class Munchmap: UIViewController {
         
     }
     @IBAction func loginMpBTN(_ sender: UIButton) {
-        //if let email = usernameTF.text
-        //validCode()
-        resetForm()
+        guard let text1 = usernameTF.text, !text1.isEmpty,
+              let text2 = passwordTF.text, !text2.isEmpty else {
+            // If any of the fields are empty, display an alert or handle it accordingly
+            let alertController = UIAlertController(title: "Error", message: "Please fill in all fields", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+            return performSegue(withIdentifier: "logintouserinfo", sender: self)
+        }
     }
     
     @IBAction func forgotPsdMpBTN(_ sender: UIButton) {
     }
     
     @IBAction func signupRegMpBTN(_ sender: UIButton) {
-    }
-    
-    @IBAction func signupRgBTN(_ sender: UIButton) {
-        
     }
     
     @IBAction func submitUISBTN(_ sender: UIButton) {
