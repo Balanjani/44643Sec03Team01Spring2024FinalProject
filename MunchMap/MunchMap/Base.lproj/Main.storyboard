@@ -390,7 +390,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Add"/>
                                                         <connections>
-                                                            <segue destination="au5-Xx-3ms" kind="show" id="pFz-A7-Pvr"/>
+                                                            <segue destination="au5-Xx-3ms" kind="show" id="CGr-Rp-V2v"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
