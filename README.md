@@ -47,5 +47,7 @@ The application functions as a food tracker to assist users in keeping tabs on t
 #### As a team, we effectively distributed tasks equally among team members and successfully completed them
 ## SPRINT 05:
 ### Objective: Updated functionalites for Login page as well as alert message. And implemented functionalities for register page and UserInformation page.
-### 
+### Achievements:
+### As a team, we effectively distributed code-functionalites in pages equally among team members and successfully completed them.
+####
 
