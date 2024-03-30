@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -563,7 +563,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ltQ-hL-wv1" userLabel="passwordTF">
                                                         <rect key="frame" x="180.66666666666663" y="0.0" width="172.33333333333337" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -579,7 +579,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NvD-r3-S8u" userLabel="confrimPsdTF">
                                                         <rect key="frame" x="180.66666666666663" y="0.0" width="172.33333333333337" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -590,6 +590,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="353" height="47"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="signup" cornerStyle="capsule"/>
+                                                        <connections>
+                                                            <action selector="SignupBTN:" destination="e6N-GG-7EL" eventType="touchUpInside" id="ls5-hJ-E54"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -613,11 +616,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="31R-3g-adB"/>
                     <connections>
-                        <outlet property="confrimPasswordTF" destination="NvD-r3-S8u" id="bf9-uy-eO7"/>
+                        <outlet property="confrimPasswordTF" destination="NvD-r3-S8u" id="yl8-f0-u3z"/>
                         <outlet property="firstNameTF" destination="4Vm-sT-aS5" id="MW7-pF-6Va"/>
                         <outlet property="gmailTF" destination="1eT-dh-heF" id="98f-DB-3K9"/>
-                        <outlet property="lastNamrTF" destination="7sM-jb-8u4" id="8dE-IU-m6J"/>
-                        <outlet property="passwordTF" destination="SMb-GK-sLx" id="VvN-Jq-G7e"/>
+                        <outlet property="lastNameTF" destination="7sM-jb-8u4" id="TBX-oY-DT4"/>
+                        <outlet property="passwordTF" destination="ltQ-hL-wv1" id="ujN-Tk-baE"/>
                         <outlet property="phoneNumberTF" destination="lxF-GJ-EhB" id="iAN-Yh-2ys"/>
                     </connections>
                 </viewController>
@@ -743,7 +746,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
