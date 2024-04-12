@@ -14,16 +14,6 @@ class Munchmap: UIViewController {
     
     
     
-    @IBOutlet weak var launchLAV: LottieAnimationView!{
-        didSet{
-            launchLAV.animation = .named("munchmap")
-            launchLAV.alpha = 1
-            launchLAV.play(){ [weak self] _ in UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 1, delay: 0.1, options: [.curveEaseIn]){
-                self!.launchLAV.alpha = 0
-            }
-            }
-        }
-    }
     
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
