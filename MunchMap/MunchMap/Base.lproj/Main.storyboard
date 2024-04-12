@@ -231,7 +231,6 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Submit" cornerStyle="capsule"/>
                                                 <connections>
                                                     <action selector="submitBTN:" destination="ywu-nq-OFN" eventType="touchUpInside" id="h3B-Ru-pMZ"/>
-                                                    <segue destination="KnU-QS-aET" kind="show" identifier="userdatatodisplay" id="RqX-VP-8ln"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -255,6 +254,7 @@
                         <outlet property="WeightTF" destination="QAP-EN-Z2g" id="LgF-Lf-jpR"/>
                         <outlet property="genderPCK" destination="TFy-ma-LQ7" id="mIZ-1l-kJY"/>
                         <outlet property="logoBTN" destination="z1O-e7-Uhh" id="Gfu-JE-Kzx"/>
+                        <segue destination="KnU-QS-aET" kind="show" identifier="userdatatocalorie" id="xmw-Og-KxO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0M-pH-wvR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -694,7 +694,7 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaA-ib-eu8" userLabel="logoBTN">
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="237.66666666666666"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button" cornerStyle="capsule">
+                                        <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
                                             <backgroundConfiguration key="background" image="logo"/>
                                         </buttonConfiguration>
                                     </button>

@@ -58,13 +58,41 @@ class UserInformationVC: UIViewController, UITextFieldDelegate,UIPickerViewDataS
     
     @IBAction func submitBTN(_ sender: UIButton) {
         
+        checkFieldsAndSegue()
     }
     
-    
-    
-    
-    
-    
+    func checkFieldsAndSegue() {
+            if let ageText = AgeTF.text, let heightText = HeightTF.text,
+               let weightText = WeightTF.text{
+                if ageText == ""{
+                    openAlert(title: "Alert", message: "Please enter Age", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in}])
+                }else{
+                    if heightText == ""{
+                        openAlert(title: "Alert", message: "Please enter Height", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in}])
+                    } else {
+                        if weightText == ""{
+                            openAlert(title: "Alert", message: "Please enter weight", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in}])
+                        }
+                    }
+                }
+            performSegue(withIdentifier: "userdatatocalorie", sender: self)
+        }
+    }
+    public func openAlert(title: String,
+                          message: String,
+                          alertStyle:UIAlertController.Style,
+                          actionTitles:[String],
+                          actionStyles:[UIAlertAction.Style],
+                          actions: [((UIAlertAction) -> Void)]){
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: alertStyle)
+        for(index, indexTitle) in actionTitles.enumerated(){
+            let action = UIAlertAction(title: indexTitle, style: actionStyles[index], handler: actions[index])
+            alertController.addAction(action)
+        }
+        self.present(alertController, animated: true)
+    }
+    }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // Allow only numeric characters and backspace
@@ -85,4 +113,4 @@ class UserInformationVC: UIViewController, UITextFieldDelegate,UIPickerViewDataS
      */
     
     
-}
+
