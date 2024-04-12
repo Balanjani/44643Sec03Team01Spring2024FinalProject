@@ -72,7 +72,7 @@ class Munchmap: UIViewController {
         guard let text1 = usernameTF.text, !text1.isEmpty,
               let text2 = passwordTF.text, !text2.isEmpty else {
             // If any of the fields are empty, display an alert or handle it accordingly
-            let alertController = UIAlertController(title: "Error", message: "Please fill in all fields", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Message", message: "Please fill in all fields", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)

@@ -223,7 +223,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Submit" cornerStyle="capsule"/>
                                                 <connections>
                                                     <action selector="submitBTN:" destination="ywu-nq-OFN" eventType="touchUpInside" id="h3B-Ru-pMZ"/>
-                                                    <segue destination="KnU-QS-aET" kind="show" id="RqX-VP-8ln"/>
+                                                    <segue destination="KnU-QS-aET" kind="show" identifier="userdatatodisplay" id="RqX-VP-8ln"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -245,6 +245,7 @@
                         <outlet property="AgeTF" destination="dD3-k5-FYQ" id="QwB-v3-uPe"/>
                         <outlet property="HeightTF" destination="27g-uG-gpI" id="p9v-OA-2h1"/>
                         <outlet property="WeightTF" destination="QAP-EN-Z2g" id="LgF-Lf-jpR"/>
+                        <outlet property="genderPCK" destination="TFy-ma-LQ7" id="mIZ-1l-kJY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0M-pH-wvR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
