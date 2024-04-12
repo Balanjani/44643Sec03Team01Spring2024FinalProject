@@ -20,10 +20,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZVs-1B-gWR" userLabel="bigContainerSV">
                                 <rect key="frame" x="20" y="20" width="353" height="792"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="747" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="d4K-9U-zY6">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AR6-LA-oR8">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="285"/>
-                                        <color key="backgroundColor" red="0.11372549019607843" green="0.45098039215686275" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </imageView>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background" image="logo"/>
+                                        </buttonConfiguration>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Cea-8V-K70" userLabel="LoginSV">
                                         <rect key="frame" x="0.0" y="293" width="353" height="499"/>
                                         <subviews>
@@ -130,6 +133,7 @@
                     <connections>
                         <outlet property="Message" destination="X2g-Pw-Y1x" id="MD2-bN-u2p"/>
                         <outlet property="loginOtMpBTN" destination="JKj-8w-xa1" id="oCL-dE-v0a"/>
+                        <outlet property="logoBTN" destination="AR6-LA-oR8" id="H5a-wu-k6r"/>
                         <outlet property="passwordTF" destination="5uT-gw-3Nu" id="tO4-Ye-A8V"/>
                         <outlet property="usernameTF" destination="5z2-8e-tQ8" id="se4-rA-nam"/>
                     </connections>
@@ -149,9 +153,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7hV-8q-0gw" userLabel="BigContainerSV">
                                 <rect key="frame" x="20" y="20" width="353" height="812"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="E7H-q5-o79">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1O-e7-Uhh">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="402"/>
-                                    </imageView>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background" image="logo"/>
+                                        </buttonConfiguration>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XJt-EH-wTT" userLabel="PersonalInfoSV">
                                         <rect key="frame" x="0.0" y="410" width="353" height="402"/>
                                         <subviews>
@@ -246,6 +254,7 @@
                         <outlet property="HeightTF" destination="27g-uG-gpI" id="p9v-OA-2h1"/>
                         <outlet property="WeightTF" destination="QAP-EN-Z2g" id="LgF-Lf-jpR"/>
                         <outlet property="genderPCK" destination="TFy-ma-LQ7" id="mIZ-1l-kJY"/>
+                        <outlet property="logoBTN" destination="z1O-e7-Uhh" id="Gfu-JE-Kzx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0M-pH-wvR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -294,9 +303,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iGu-2k-t4Y" userLabel="BigContainerSV">
                                 <rect key="frame" x="20" y="20" width="353" height="812"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="EnQ-am-zYN">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhy-gl-sQl">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="197"/>
-                                    </imageView>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background" image="logo"/>
+                                        </buttonConfiguration>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PhB-oD-64d" userLabel="FoodCountSV">
                                         <rect key="frame" x="0.0" y="205" width="353" height="197"/>
                                         <subviews>
@@ -497,6 +510,7 @@
                         <outlet property="FatPV" destination="4kM-aq-OM5" id="lda-Nh-xYx"/>
                         <outlet property="ProtienPV" destination="iU5-0r-Loa" id="tgE-ys-h7J"/>
                         <outlet property="RemainingPV" destination="u9d-ZX-CdW" id="2a6-Ln-LPj"/>
+                        <outlet property="logoBTN" destination="Zhy-gl-sQl" id="vJW-2G-0E2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRL-Gw-Cda" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -514,11 +528,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="386-Kx-6fd" userLabel="BigContainerSV">
                                 <rect key="frame" x="20" y="20" width="353" height="792"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="1TS-rB-5H8">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="237.66666666666666"/>
-                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gc-wN-js1" userLabel="logoBTN">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="277.33333333333331"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background" image="logo"/>
+                                        </buttonConfiguration>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PsZ-oH-kuo" userLabel="PersonalInfo">
-                                        <rect key="frame" x="0.0" y="245.66666666666669" width="353" height="546.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="285.33333333333326" width="353" height="506.66666666666674"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TWo-pB-Ybv" userLabel="FirstnameSV">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
@@ -537,7 +555,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dV7-hF-01M" userLabel="LastnameSV">
-                                                <rect key="frame" x="0.0" y="83" width="353" height="34"/>
+                                                <rect key="frame" x="0.0" y="76.333333333333371" width="353" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz7-jA-8Ya">
                                                         <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="34"/>
@@ -553,7 +571,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KbJ-XC-5yo" userLabel="GmailSV">
-                                                <rect key="frame" x="0.0" y="166.33333333333331" width="353" height="34"/>
+                                                <rect key="frame" x="0.0" y="153" width="353" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gmail ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kL2-wg-Cyq">
                                                         <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="34"/>
@@ -569,7 +587,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="n2b-xP-gjm" userLabel="PhoneSV">
-                                                <rect key="frame" x="0.0" y="249.33333333333331" width="353" height="34"/>
+                                                <rect key="frame" x="0.0" y="229.66666666666669" width="353" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWp-mt-Cog">
                                                         <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="34"/>
@@ -585,7 +603,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lwl-cN-yxm" userLabel="passwordSV">
-                                                <rect key="frame" x="0.0" y="332.66666666666669" width="353" height="34"/>
+                                                <rect key="frame" x="0.0" y="306.00000000000006" width="353" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2X-hn-Gxi">
                                                         <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="34"/>
@@ -601,7 +619,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SMb-GK-sLx" userLabel="confirmpsdSV">
-                                                <rect key="frame" x="0.0" y="415.66666666666669" width="353" height="34"/>
+                                                <rect key="frame" x="0.0" y="382.66666666666669" width="353" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4B-QT-exi">
                                                         <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="34"/>
@@ -617,7 +635,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QYF-Ed-zY6" userLabel="SignupSV">
-                                                <rect key="frame" x="0.0" y="498.66666666666669" width="353" height="47.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="459.00000000000006" width="353" height="47.666666666666686"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xss-oq-0f8">
                                                         <rect key="frame" x="0.0" y="0.0" width="353" height="47.666666666666664"/>
@@ -633,8 +651,8 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="1TS-rB-5H8" firstAttribute="height" secondItem="386-Kx-6fd" secondAttribute="height" multiplier="0.3" id="7I3-n2-39R"/>
                                     <constraint firstItem="Xss-oq-0f8" firstAttribute="height" secondItem="386-Kx-6fd" secondAttribute="height" multiplier="0.06" id="KCh-DG-AEJ"/>
+                                    <constraint firstItem="7Gc-wN-js1" firstAttribute="height" secondItem="386-Kx-6fd" secondAttribute="height" multiplier="0.35" id="hfW-cB-2jN"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -653,6 +671,7 @@
                         <outlet property="firstNameTF" destination="4Vm-sT-aS5" id="MW7-pF-6Va"/>
                         <outlet property="gmailTF" destination="1eT-dh-heF" id="98f-DB-3K9"/>
                         <outlet property="lastNameTF" destination="7sM-jb-8u4" id="TBX-oY-DT4"/>
+                        <outlet property="logoBTN" destination="7Gc-wN-js1" id="wbW-2h-aRV"/>
                         <outlet property="passwordTF" destination="ltQ-hL-wv1" id="ujN-Tk-baE"/>
                         <outlet property="phoneNumberTF" destination="lxF-GJ-EhB" id="iAN-Yh-2ys"/>
                     </connections>
@@ -672,9 +691,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MP0-B7-tCA" userLabel="BigContainerSV">
                                 <rect key="frame" x="30" y="30" width="333" height="792"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="4Vk-P2-sag">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaA-ib-eu8" userLabel="logoBTN">
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="237.66666666666666"/>
-                                    </imageView>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background" image="logo"/>
+                                        </buttonConfiguration>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DVz-Pg-GIs" userLabel="MealSV">
                                         <rect key="frame" x="0.0" y="245.66666666666671" width="333" height="256.33333333333326"/>
                                         <subviews>
@@ -741,7 +764,7 @@
                                 <constraints>
                                     <constraint firstItem="CF1-Ai-GPS" firstAttribute="height" secondItem="MP0-B7-tCA" secondAttribute="height" multiplier="0.123" id="Y46-ex-IRc"/>
                                     <constraint firstItem="9M4-XH-04v" firstAttribute="height" secondItem="MP0-B7-tCA" secondAttribute="height" multiplier="0.09" id="a6z-sX-Wnx"/>
-                                    <constraint firstItem="4Vk-P2-sag" firstAttribute="height" secondItem="MP0-B7-tCA" secondAttribute="height" multiplier="0.3" id="a74-D5-b4O"/>
+                                    <constraint firstItem="JaA-ib-eu8" firstAttribute="height" secondItem="MP0-B7-tCA" secondAttribute="height" multiplier="0.3" id="fRA-vr-qDd"/>
                                     <constraint firstItem="Ofa-8C-lHK" firstAttribute="height" secondItem="MP0-B7-tCA" secondAttribute="height" multiplier="0.123" id="fSD-sF-Ldp"/>
                                 </constraints>
                             </stackView>
@@ -766,6 +789,7 @@
                         <outlet property="LunchOL" destination="rdA-aM-taf" id="cNS-tL-L1J"/>
                         <outlet property="SaveOL" destination="9M4-XH-04v" id="IJM-Ce-0OK"/>
                         <outlet property="SnacksOL" destination="wel-r9-XJm" id="3Mh-O7-jYj"/>
+                        <outlet property="logoBTN" destination="JaA-ib-eu8" id="vzo-xJ-KL1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCJ-OI-yvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

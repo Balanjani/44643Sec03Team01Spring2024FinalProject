@@ -16,6 +16,8 @@ class UserInformationVC: UIViewController, UITextFieldDelegate,UIPickerViewDataS
     
     @IBOutlet weak var genderPCK: UIPickerView!
     
+    @IBOutlet weak var logoBTN: UIButton!
+    
     let genders = ["","Male", "Female", "Other"]
     
     override func viewDidLoad() {

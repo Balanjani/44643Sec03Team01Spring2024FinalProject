@@ -21,6 +21,9 @@ class registerSV: UIViewController {
     
     @IBOutlet weak var confrimPasswordTF: UITextField!
     
+    
+    @IBOutlet weak var logoBTN: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -139,6 +142,8 @@ class registerSV: UIViewController {
     }
     
 
+    @IBAction func logoBKBTN(_ sender: UIButton) {
+    }
     /*
     // MARK: - Navigation
 

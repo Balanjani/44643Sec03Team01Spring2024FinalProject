@@ -19,6 +19,7 @@ class calorieProgressVC: UIViewController {
     
     @IBOutlet weak var ProtienPV: UIProgressView!
     
+    @IBOutlet weak var logoBTN: UIButton!
     
     
     
@@ -40,4 +41,6 @@ class calorieProgressVC: UIViewController {
     }
     */
 
+    @IBAction func logoBKBTN(_ sender: UIButton) {
+    }
 }

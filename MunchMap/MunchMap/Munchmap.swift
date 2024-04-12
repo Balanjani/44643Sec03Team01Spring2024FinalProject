@@ -19,6 +19,7 @@ class Munchmap: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var Message: UILabel!
     
+    @IBOutlet weak var logoBTN: UIButton!
     @IBOutlet weak var loginOtMpBTN: UIButton!
     
     
@@ -80,6 +81,8 @@ class Munchmap: UIViewController {
     }
     
     
+    @IBAction func logoBKBTN(_ sender: UIButton) {
+    }
     
     
     
