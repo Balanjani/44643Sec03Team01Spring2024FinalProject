@@ -50,4 +50,8 @@ The application functions as a food tracker to assist users in keeping tabs on t
 ### Achievements:
 ### As a team, we effectively distributed code-functionalites in different pages equally among team members and successfully completed them.
 #### 
-
+## SPRINT 06:
+### Objective: Added Picker view for Gender Constraint, Added Lottie Animation view, Replaced Munchmap logo with action with button, Added alert msg if the user does not give valid age, height, weight. Created forget password Screen, Updated slider functionality, and a few other functionalities.
+### Achievements:
+### As a team, we efficiently allocated coding tasks across different pages among team members, ensuring an equitable distribution of functionalities. Consequently, we were able to accomplish our objectives effectively and within the specified time frame.
+ 
