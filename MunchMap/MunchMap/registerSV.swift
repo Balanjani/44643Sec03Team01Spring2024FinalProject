@@ -143,6 +143,7 @@ class registerSV: UIViewController {
     
 
     @IBAction func logoBKBTN(_ sender: UIButton) {
+        performSegue(withIdentifier: "signuptologon", sender: self)
     }
     /*
     // MARK: - Navigation

@@ -59,5 +59,7 @@ class calorieProgressVC: UIViewController {
     */
 
     @IBAction func logoBKBTN(_ sender: UIButton) {
+        performSegue(withIdentifier: "caloriestouserinfo", sender: self)
+        
     }
 }
