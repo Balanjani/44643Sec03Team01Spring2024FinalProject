@@ -2,7 +2,7 @@
 //  LottieVC.swift
 //  MunchMap
 //
-//  Created by dinesh domara on 12/04/24.
+//  Created by Srinivas Mane on 12/04/24.
 //
 
 import UIKit

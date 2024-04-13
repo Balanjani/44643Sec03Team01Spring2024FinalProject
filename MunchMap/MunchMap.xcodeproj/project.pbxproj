@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		70450D882BB51F7200F1045A /* calorieProgressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70450D872BB51F7200F1045A /* calorieProgressVC.swift */; };
 		70C69FD32BC9E89300A42BB1 /* LottieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C69FD22BC9E89300A42BB1 /* LottieVC.swift */; };
+		70C69FD72BCA14D800A42BB1 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C69FD62BCA14D800A42BB1 /* ForgotPasswordVC.swift */; };
 		8F6C47862B82CB7A004E6C00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C47852B82CB7A004E6C00 /* AppDelegate.swift */; };
 		8F6C47882B82CB7A004E6C00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C47872B82CB7A004E6C00 /* SceneDelegate.swift */; };
 		8F6C478A2B82CB7A004E6C00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C47892B82CB7A004E6C00 /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		70450D872BB51F7200F1045A /* calorieProgressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calorieProgressVC.swift; sourceTree = "<group>"; };
 		70C69FD22BC9E89300A42BB1 /* LottieVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieVC.swift; sourceTree = "<group>"; };
+		70C69FD62BCA14D800A42BB1 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		8F6C47822B82CB7A004E6C00 /* MunchMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MunchMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F6C47852B82CB7A004E6C00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F6C47872B82CB7A004E6C00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				8F6C47892B82CB7A004E6C00 /* ViewController.swift */,
 				A5DB73222B843BC5004CC529 /* Munchmap.swift */,
 				8F6C478B2B82CB7A004E6C00 /* Main.storyboard */,
+				70C69FD62BCA14D800A42BB1 /* ForgotPasswordVC.swift */,
 				70C69FD22BC9E89300A42BB1 /* LottieVC.swift */,
 				A547CF772BB666B300FD99A1 /* UserInformationVC.swift */,
 				A547CF752BB6637E00FD99A1 /* registerSV.swift */,
@@ -288,6 +291,7 @@
 				70450D882BB51F7200F1045A /* calorieProgressVC.swift in Sources */,
 				8F6C478A2B82CB7A004E6C00 /* ViewController.swift in Sources */,
 				8F6C47862B82CB7A004E6C00 /* AppDelegate.swift in Sources */,
+				70C69FD72BCA14D800A42BB1 /* ForgotPasswordVC.swift in Sources */,
 				A5DB73232B843BC5004CC529 /* Munchmap.swift in Sources */,
 				8F977D802BB6556F00F56904 /* BreakfastVC.swift in Sources */,
 				70C69FD32BC9E89300A42BB1 /* LottieVC.swift in Sources */,

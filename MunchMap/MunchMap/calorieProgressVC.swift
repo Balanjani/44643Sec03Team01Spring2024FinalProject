@@ -2,7 +2,7 @@
 //  calorieProgressVC.swift
 //  MunchMap
 //
-//  Created by dinesh domara on 27/03/24.
+//  Created by Srinivas Mane on 27/03/24.
 //
 
 import UIKit
