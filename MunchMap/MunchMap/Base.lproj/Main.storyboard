@@ -581,7 +581,8 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Add"/>
                                                         <connections>
-                                                            <segue destination="au5-Xx-3ms" kind="show" id="CGr-Rp-V2v"/>
+                                                            <action selector="breakfastBTN:" destination="KnU-QS-aET" eventType="touchUpInside" id="3uF-8q-4TZ"/>
+                                                            <segue destination="au5-Xx-3ms" kind="show" identifier="calorietobreakfast" id="CGr-Rp-V2v"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -599,6 +600,10 @@
                                                         <rect key="frame" x="180.66666666666663" y="0.0" width="172.33333333333337" height="43.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                                                        <connections>
+                                                            <action selector="lunchBTN:" destination="KnU-QS-aET" eventType="touchUpInside" id="bHO-Jf-G0v"/>
+                                                            <segue destination="au5-Xx-3ms" kind="show" identifier="lunchcalorietobreakfast" id="TLe-nE-0Ok"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -615,6 +620,10 @@
                                                         <rect key="frame" x="180.66666666666663" y="0.0" width="172.33333333333337" height="43"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                                                        <connections>
+                                                            <action selector="snaksBTN:" destination="KnU-QS-aET" eventType="touchUpInside" id="rAb-tG-r6C"/>
+                                                            <segue destination="au5-Xx-3ms" kind="show" identifier="scankstobreakfast" id="ZGr-i1-gDl"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -631,6 +640,10 @@
                                                         <rect key="frame" x="180.66666666666663" y="0.0" width="172.33333333333337" height="43.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                                                        <connections>
+                                                            <action selector="dinnerBTN:" destination="KnU-QS-aET" eventType="touchUpInside" id="cfq-Ar-Yf6"/>
+                                                            <segue destination="au5-Xx-3ms" kind="show" identifier="dinnertobreakfastVC" id="sc5-q0-jC5"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -853,26 +866,12 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DVz-Pg-GIs" userLabel="MealSV">
                                         <rect key="frame" x="0.0" y="245.66666666666671" width="333" height="256.33333333333326"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9A-9B-C1x">
-                                                <rect key="frame" x="0.0" y="0.0" width="333" height="58"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Breakfast"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdA-aM-taf">
-                                                <rect key="frame" x="0.0" y="66" width="333" height="58"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Lunch"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wel-r9-XJm">
-                                                <rect key="frame" x="0.0" y="132" width="333" height="58"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Snacks"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSY-OG-B6C">
-                                                <rect key="frame" x="0.0" y="198" width="333" height="58.333333333333314"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Dinner"/>
-                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkm-O8-f8r">
+                                                <rect key="frame" x="0.0" y="0.0" width="333" height="256.33333333333331"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CF1-Ai-GPS" userLabel="DishnameSV">
@@ -932,15 +931,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="Uth-uy-SDJ"/>
                     <connections>
-                        <outlet property="BreakfastOL" destination="A9A-9B-C1x" id="UK2-1l-5xV"/>
-                        <outlet property="DinnerOL" destination="mSY-OG-B6C" id="Fow-a5-7vS"/>
                         <outlet property="DishNameOL" destination="FxA-5z-BZl" id="4jv-Fv-TMN"/>
                         <outlet property="DishTFOL" destination="H9G-01-LxH" id="qjH-Ce-TcH"/>
                         <outlet property="IngredientsOL" destination="iGi-oe-O07" id="NaV-9t-Vuy"/>
                         <outlet property="IngredientsTFOL" destination="Jf8-LG-xu4" id="vqT-AX-CG9"/>
-                        <outlet property="LunchOL" destination="rdA-aM-taf" id="cNS-tL-L1J"/>
                         <outlet property="SaveOL" destination="9M4-XH-04v" id="IJM-Ce-0OK"/>
-                        <outlet property="SnacksOL" destination="wel-r9-XJm" id="3Mh-O7-jYj"/>
                         <outlet property="logoBTN" destination="JaA-ib-eu8" id="vzo-xJ-KL1"/>
                     </connections>
                 </viewController>

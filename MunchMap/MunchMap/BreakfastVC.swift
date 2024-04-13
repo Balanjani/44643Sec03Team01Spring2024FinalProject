@@ -9,10 +9,7 @@ import UIKit
 
 class BreakfastVC: UIViewController {
 
-    @IBOutlet weak var BreakfastOL: UIButton!
-    @IBOutlet weak var LunchOL: UIButton!
-    @IBOutlet weak var SnacksOL: UIButton!
-    @IBOutlet weak var DinnerOL: UIButton!
+    
     @IBOutlet weak var DishNameOL: UILabel!
     @IBOutlet weak var DishTFOL: UITextField!
     @IBOutlet weak var IngredientsOL: UILabel!
@@ -24,49 +21,12 @@ class BreakfastVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        BreakfastOL.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
-        LunchOL.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
-        SnacksOL.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
-        DinnerOL.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+      
            
         // Do any additional setup after loading the view.
     }
     
-    @objc func buttonTapped(_ sender: UIButton) {
-           // Deselect all buttons
-           BreakfastOL.isSelected = false
-           LunchOL.isSelected = false
-           SnacksOL.isSelected = false
-           DinnerOL.isSelected = false
-           
-           // Highlight the tapped button
-           sender.isSelected = true
-           
-            BreakfastOL.backgroundColor = BreakfastOL.isSelected ? UIColor.systemCyan : UIColor.clear
-            LunchOL.backgroundColor = LunchOL.isSelected ? UIColor.systemCyan : UIColor.clear
-            SnacksOL.backgroundColor = SnacksOL.isSelected ? UIColor.systemCyan : UIColor.clear
-            DinnerOL.backgroundColor = DinnerOL.isSelected ? UIColor.systemCyan : UIColor.clear
-            
-
-           // Optionally, you can perform other actions based on the tapped button
-           // For example, update UI elements based on the selected meal type
-           switch sender {
-           case BreakfastOL:
-               // Handle breakfast selection
-               break
-           case LunchOL:
-               // Handle lunch selection
-               break
-           case SnacksOL:
-               // Handle snacks selection
-               break
-           case DinnerOL:
-               // Handle dinner selection
-               break
-           default:
-               break
-           }
-       }
+   
    
     @IBAction func logoBKBTN(_ sender: UIButton) {
     }

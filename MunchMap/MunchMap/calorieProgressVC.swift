@@ -57,7 +57,21 @@ class calorieProgressVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func breakfastBTN(_ sender: UIButton) {
+        performSegue(withIdentifier: "calorietobreakfast", sender: self)
+    }
+    
+    @IBAction func lunchBTN(_ sender: UIButton) {
+        performSegue(withIdentifier: "lunchcalorietobreakfast", sender: self)
+    }
+    
+    @IBAction func snaksBTN(_ sender: UIButton) {
+        performSegue(withIdentifier: "scankstobreakfast", sender: self)
+    }
+    
+    @IBAction func dinnerBTN(_ sender: UIButton) {
+        performSegue(withIdentifier: "dinnertobreakfastVC", sender: self)
+    }
     @IBAction func logoBKBTN(_ sender: UIButton) {
         performSegue(withIdentifier: "caloriestouserinfo", sender: self)
         
