@@ -9,6 +9,8 @@ import UIKit
 import Lottie
 import Foundation
 import SwiftUI
+import FirebaseAuth
+import SVProgressHUD
 
 class Munchmap: UIViewController {
     
@@ -19,9 +21,28 @@ class Munchmap: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var Message: UILabel!
     
-    @IBOutlet weak var logoBTN: UIButton!
     @IBOutlet weak var loginOtMpBTN: UIButton!
-    
+    @IBOutlet weak var launchLAV: LottieAnimationView!{
+        didSet{
+            FireStoreOperations.fetchUserData{_ in
+            }
+            
+            launchLAV.animation = .named("munchmap")
+            launchLAV.alpha = 1
+            launchLAV.play(){ [weak self] _ in UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 1, delay: 0.1, options: [.curveEaseIn]){
+                
+                if Auth.auth().currentUser != nil {
+                    
+                    //self!.launchLAV.alpha = 0
+                    self?.performSegue(withIdentifier: "loginToHome", sender: self)
+                    
+                }else{
+                    self!.launchLAV.alpha = 0
+                }
+            }
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,8 +81,8 @@ class Munchmap: UIViewController {
         
     }
     @IBAction func loginMpBTN(_ sender: UIButton) {
-        guard let text1 = usernameTF.text, !text1.isEmpty,
-              let text2 = passwordTF.text, !text2.isEmpty else {
+        guard let email = usernameTF.text, !email.isEmpty,
+              let password = passwordTF.text, !password.isEmpty else {
             // If any of the fields are empty, display an alert or handle it accordingly
             let alertController = UIAlertController(title: "Message", message: "Please fill in all fields", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -69,7 +90,36 @@ class Munchmap: UIViewController {
             present(alertController, animated: true, completion: nil)
             return performSegue(withIdentifier: "logintouserinfo", sender: self)
         }
+        
+        SVProgressHUD.show()
+        DBManager.shared.signIn(email: email, password: password) { error, success in
+            
+            if success {
+                
+                SVProgressHUD.dismiss()
+                self.performSegue(withIdentifier: "loginToHome", sender: self)
+            }else {
+                
+                SVProgressHUD.dismiss()
+                self.openAlert(title: "Alert", message: error?.localizedDescription ?? "", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
+            }
+        }
     }
+    public func openAlert(title: String,
+                          message: String,
+                          alertStyle:UIAlertController.Style,
+                          actionTitles:[String],
+                          actionStyles:[UIAlertAction.Style],
+                          actions: [((UIAlertAction) -> Void)]){
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: alertStyle)
+        for(index, indexTitle) in actionTitles.enumerated(){
+            let action = UIAlertAction(title: indexTitle, style: actionStyles[index], handler: actions[index])
+            alertController.addAction(action)
+        }
+        self.present(alertController, animated: true)
+    }
+    
     
     @IBAction func forgotPsdMpBTN(_ sender: UIButton) {
         performSegue(withIdentifier: "ForgetpassSegue", sender: self)
@@ -80,21 +130,6 @@ class Munchmap: UIViewController {
     
     @IBAction func submitUISBTN(_ sender: UIButton) {
     }
-    
-    
-    @IBAction func logoBKBTN(_ sender: UIButton) {
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
