@@ -109,6 +109,9 @@ class BreakfastVC: UIViewController {
         delegate?.didDishSelected(dish: dish)
         self.dismiss(animated: true)
     }
+    @IBAction func cancel(_ sender: UIButton) {
+        performSegue(withIdentifier: "backtouser", sender: self)
+    }
     
     
     /*
