@@ -111,6 +111,7 @@ class calorieProgressVC: UIViewController, selectDishDelegate, caloriesDelegate{
         CarbsPV.progress = Float(dailyInfo?.carb as? Double ?? 0) / 100
         carbsLBL.text = String(format: "%0.0f / 100", Float(dailyInfo?.carb as? Double ?? 0))
     }
+     
     
     // MARK: - Navigation
     
@@ -239,7 +240,7 @@ class calorieProgressVC: UIViewController, selectDishDelegate, caloriesDelegate{
     
     func showAlert(str: String) -> Void {
         
-        let alert = UIAlertController(title: "Error", message: str, preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Added Successfully", message: str, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }

@@ -81,6 +81,7 @@ class Munchmap: UIViewController {
         
     }
     @IBAction func loginMpBTN(_ sender: UIButton) {
+        
         guard let email = usernameTF.text, !email.isEmpty,
               let password = passwordTF.text, !password.isEmpty else {
             // If any of the fields are empty, display an alert or handle it accordingly
@@ -88,7 +89,7 @@ class Munchmap: UIViewController {
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
-            return performSegue(withIdentifier: "logintouserinfo", sender: self)
+            return
         }
         
         SVProgressHUD.show()
@@ -146,14 +147,23 @@ class Munchmap: UIViewController {
     }
     func checkvalid()
     {
-        if Message.isHidden == true
-        {
-            loginOtMpBTN.isEnabled = true
-        }else{
-            loginOtMpBTN.isEnabled = false
+        if let username = usernameTF.text, let password = passwordTF.text {
+            let usernameMessage = inValidEmail(username) ?? ""
+            
+            if !usernameMessage.isEmpty {
+                Message.text = usernameMessage
+                Message.isHidden = false
+            } else {
+                let passwordMessage = inValidPassword(password) ?? ""
+                let combinedMessage = "\(usernameMessage) \(passwordMessage)"
+                Message.text = combinedMessage.isEmpty ? "" : combinedMessage
+                Message.isHidden = combinedMessage.isEmpty
+            }
+        } else {
+            Message.text = "Required to fill the fields"
+            Message.isHidden = false
         }
     }
-    
     // Usage example
     func inValidEmail(_ value: String) -> String?
     {
