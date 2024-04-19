@@ -2,65 +2,69 @@
 //  ForgotPasswordVC.swift
 //  MunchMap
 //
-//  Created by Sriinivas Mane on 12/04/24.
+//  Created by dinesh domara on 18/04/24.
 //
 
 import UIKit
+import FirebaseAuth
 
 class ForgotPasswordVC: UIViewController {
-    
-    @IBOutlet weak var EmailTF: UITextField!
-    
-    @IBOutlet weak var ResetBTN: UIButton!
-    
-    
-    
+
+    @IBOutlet weak var MailTF: UITextField!
+    @IBOutlet weak var SubmitBTN: UIButton!
+    @IBOutlet weak var Cancel: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        EmailTF.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+
+        // Do any additional setup after loading the view.
     }
-    
-    @objc func textFieldDidChange(_ textField: UITextField) {
-        if let email = EmailTF.text, isValidEmail(email: email) {
-            ResetBTN.isEnabled = true
-        } else {
-            ResetBTN.isEnabled = false
+    @IBAction func Submit(_ sender: Any) {
+        guard let email = MailTF.text, !email.isEmpty else {
+                            openAlert(title: "Alert", message: "Please enter email!", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in }])
+                            return
+                        }
+                        Auth.auth().sendPasswordReset(withEmail: email) { [weak self] error in
+                            guard let self = self else { return }
+                            if let error = error {
+                                openAlert(title: "Alert", message: "Error sending reset email:", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in }])
+                            } else {
+                                openAlert(title: "Alert", message: "Reset email sent successfully", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in }])
+                                MailTF.text = ""
+                            }
+                        }
+    }
+    public func openAlert(title: String,
+                              message: String,
+                              alertStyle:UIAlertController.Style,
+                              actionTitles:[String],
+                              actionStyles:[UIAlertAction.Style],
+                              actions: [((UIAlertAction) -> Void)]){
+            
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: alertStyle)
+            for(index, indexTitle) in actionTitles.enumerated(){
+                let action = UIAlertAction(title: indexTitle, style: actionStyles[index], handler: actions[index])
+                alertController.addAction(action)
+            }
+            self.present(alertController, animated: true)
         }
-    }
     
-    func isValidEmail(email: String) -> Bool {
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-        return emailPredicate.evaluate(with: email)
-        
-    }
     
-    @IBAction func Reset(_ sender: Any) {
-        
-        guard let email = EmailTF.text else {
-            return
-        }
-        showAlert(message: "Password reset link sent to \(email)") {
-            self.performSegue(withIdentifier: "ForgetpassSegue", sender: self)
-        }
+    @IBAction func CancelBTN(_ sender: Any) {
+        self.performSegue(withIdentifier: "forgottologin", sender: sender)
+            }
+            
+            
+            func showAlert(message: String, completion: @escaping () -> Void) {
+                    let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+                        
+                        completion()
+                    }
+                    alertController.addAction(okAction)
+                    present(alertController, animated: true, completion: nil)
+                }
     }
-    
-    func showAlert(message: String, completion: (() -> Void)? = nil) {
-        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-            completion?()
-        }))
-        present(alert, animated: true, completion: nil)
-    }
-    
-    @IBAction func cancleBTN(_ sender: UIButton) {
-        performSegue(withIdentifier: "forgrttologin", sender: self)
-        
-    }
-}
     
 
     /*

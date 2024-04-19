@@ -123,7 +123,7 @@ class Munchmap: UIViewController {
     
     
     @IBAction func forgotPsdMpBTN(_ sender: UIButton) {
-        performSegue(withIdentifier: "ForgetpassSegue", sender: self)
+        performSegue(withIdentifier: "logintoforgotpassword", sender: self)
     }
     
     @IBAction func signupRegMpBTN(_ sender: UIButton) {
