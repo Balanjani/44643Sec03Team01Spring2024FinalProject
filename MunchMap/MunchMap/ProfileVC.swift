@@ -95,6 +95,19 @@ class ProfileVC: UIViewController {
         
         self.performSegue(withIdentifier: "profileToLogin", sender: self)
     }
+    
+    @IBAction func Delete(_ sender: UIButton) {
+            let user = Auth.auth().currentUser
+            
+            user?.delete { error in
+                if let error = error {
+                    self.showMsg(msg: "Error deleting user: \(error.localizedDescription)")
+                } else {
+                    self.showMsg(msg: "User deleted successfully")
+                }
+            }
+            self.performSegue(withIdentifier: "profileToLogin", sender: self)
+        }
     /*
      // MARK: - Navigation
      

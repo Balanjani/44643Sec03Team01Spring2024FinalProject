@@ -111,7 +111,7 @@ class calorieProgressVC: UIViewController, selectDishDelegate, caloriesDelegate{
         CarbsPV.progress = Float(dailyInfo?.carb as? Double ?? 0) / 100
         carbsLBL.text = String(format: "%0.0f / 100", Float(dailyInfo?.carb as? Double ?? 0))
     }
-     
+    
     
     // MARK: - Navigation
     
@@ -243,6 +243,22 @@ class calorieProgressVC: UIViewController, selectDishDelegate, caloriesDelegate{
         let alert = UIAlertController(title: "Added Successfully", message: str, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func ResetBTN(_ sender: UIButton) {
+        let params = ["calories_eaten": 0,
+                      "fat": 0,
+                      "carb": 0,
+                      "protein": 0]
+        
+        let id = FireStoreOperations.UserDailyInfo?.id ?? ""
+        DBManager.shared.updateDailyInfo(id: id, params: params) { _, success in
+            SVProgressHUD.dismiss()
+            if success {
+                // Removed showAlert method call
+                self.getDailyData() // Refresh data after reset
+            }
+        }
     }
 }
 
