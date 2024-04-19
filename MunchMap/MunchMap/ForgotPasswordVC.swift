@@ -2,7 +2,7 @@
 //  ForgotPasswordVC.swift
 //  MunchMap
 //
-//  Created by dinesh domara on 18/04/24.
+//  Created by Srinivas Mane on 18/04/24.
 //
 
 import UIKit
