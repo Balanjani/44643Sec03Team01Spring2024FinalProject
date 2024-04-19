@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "MunchMap.jpeg",
+      "filename" : "CFC8B422-BC1F-42FF-AA22-C345CF59FF94.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "logo2x.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "logo3x.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }

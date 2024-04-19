@@ -63,10 +63,10 @@ class BreakfastVC: UIViewController {
             DinnerOL.isSelected = true
         }
         
-        BreakfastOL.tintColor = BreakfastOL.isSelected ? UIColor.systemCyan : UIColor.clear
-        LunchOL.tintColor = LunchOL.isSelected ? UIColor.systemCyan : UIColor.clear
-        SnacksOL.tintColor = SnacksOL.isSelected ? UIColor.systemCyan : UIColor.clear
-        DinnerOL.tintColor = DinnerOL.isSelected ? UIColor.systemCyan : UIColor.clear
+        BreakfastOL.tintColor = BreakfastOL.isSelected ? UIColor.tintColor : UIColor.clear
+        LunchOL.tintColor = LunchOL.isSelected ? UIColor.tintColor : UIColor.clear
+        SnacksOL.tintColor = SnacksOL.isSelected ? UIColor.tintColor : UIColor.clear
+        DinnerOL.tintColor = DinnerOL.isSelected ? UIColor.tintColor : UIColor.clear
     }
     
     @objc func buttonTapped(_ sender: UIButton) {
