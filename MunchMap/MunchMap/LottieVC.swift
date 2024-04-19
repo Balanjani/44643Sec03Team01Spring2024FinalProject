@@ -2,25 +2,29 @@
 //  LottieVC.swift
 //  MunchMap
 //
-//  Created by Srinivas Mane on 12/04/24.
+//  Created by Srinivas Mane on 19/04/24.
 //
 
 import UIKit
 import Lottie
+import FirebaseAuth
 
 class LottieVC: UIViewController {
-
-    @IBOutlet weak var LaunchLAV: LottieAnimationView!{
+    
+    @IBOutlet weak var launchLAV: LottieAnimationView!{
         didSet{
-            LaunchLAV.animation = .named("munchmap")
-            LaunchLAV.alpha = 1
-            LaunchLAV.play(){ [weak self] _ in UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 1, delay: 0.1, options: [.curveEaseIn]){
-                self!.LaunchLAV.alpha = 0
-                self?.performSegue(withIdentifier: "Login", sender: self)
+            FireStoreOperations.fetchUserData{_ in
+            }
+            
+            launchLAV.animation = .named("munchmap")
+            launchLAV.alpha = 1
+            launchLAV.play(){ [weak self] _ in UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 1, delay: 0.1, options: [.curveEaseIn]){
+                self?.performSegue(withIdentifier: "lottietologin", sender: self)
             }
             }
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

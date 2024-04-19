@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JbV-3e-OeB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S0N-cW-j6G">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -9,6 +9,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--LottieVC-->
+        <scene sceneID="RWh-7J-C7S">
+            <objects>
+                <viewController id="S0N-cW-j6G" customClass="LottieVC" customModule="MunchMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FXG-QZ-mS8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hn4-uH-pgk" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wM8-KA-vDp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hn4-uH-pgk" firstAttribute="leading" secondItem="wM8-KA-vDp" secondAttribute="leading" id="A5n-ZR-YhZ"/>
+                            <constraint firstItem="wM8-KA-vDp" firstAttribute="trailing" secondItem="hn4-uH-pgk" secondAttribute="trailing" id="Cps-BM-GHX"/>
+                            <constraint firstItem="hn4-uH-pgk" firstAttribute="top" secondItem="wM8-KA-vDp" secondAttribute="top" id="h8u-jk-6wL"/>
+                            <constraint firstItem="wM8-KA-vDp" firstAttribute="bottom" secondItem="hn4-uH-pgk" secondAttribute="bottom" id="pMR-gS-Tx7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="launchLAV" destination="hn4-uH-pgk" id="8NT-WN-JEQ"/>
+                        <segue destination="JbV-3e-OeB" kind="show" identifier="lottietologin" id="tIT-Lc-esH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T7B-0v-g6J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1279" y="9"/>
+        </scene>
         <!--Munchmap-->
         <scene sceneID="kH7-LO-iBK">
             <objects>
@@ -133,7 +164,6 @@
                     <navigationItem key="navigationItem" id="Aiw-6H-gBZ"/>
                     <connections>
                         <outlet property="Message" destination="JNI-ce-szr" id="F8f-wH-RRL"/>
-                        <outlet property="launchLAV" destination="chl-xv-txs" id="9cH-UA-uFm"/>
                         <outlet property="loginOtMpBTN" destination="k3h-K2-CGr" id="1Wk-hd-06O"/>
                         <outlet property="passwordTF" destination="VsO-Ux-uSN" id="ymx-J5-Eoz"/>
                         <outlet property="usernameTF" destination="UVI-Il-JWy" id="mCX-rU-KBM"/>
@@ -1231,8 +1261,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wKo-T3-htB"/>
-        <segue reference="SZ7-Ik-g1R"/>
+        <segue reference="oS2-kZ-nuj"/>
+        <segue reference="tIT-Lc-esH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="104"/>
@@ -1245,7 +1275,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

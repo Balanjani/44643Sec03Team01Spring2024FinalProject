@@ -22,27 +22,6 @@ class Munchmap: UIViewController {
     @IBOutlet weak var Message: UILabel!
     
     @IBOutlet weak var loginOtMpBTN: UIButton!
-    @IBOutlet weak var launchLAV: LottieAnimationView!{
-        didSet{
-            FireStoreOperations.fetchUserData{_ in
-            }
-            
-            launchLAV.animation = .named("munchmap")
-            launchLAV.alpha = 1
-            launchLAV.play(){ [weak self] _ in UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 1, delay: 0.1, options: [.curveEaseIn]){
-                
-                if Auth.auth().currentUser != nil {
-                    
-                    //self!.launchLAV.alpha = 0
-                    self?.performSegue(withIdentifier: "loginToHome", sender: self)
-                    
-                }else{
-                    self!.launchLAV.alpha = 0
-                }
-            }
-            }
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
