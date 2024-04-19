@@ -1134,47 +1134,52 @@
                                         <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QIo-9v-K3x">
-                                        <rect key="frame" x="0.0" y="539.33333333333337" width="333" height="118.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="539.33333333333337" width="333" height="55.333333333333371"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuF-MA-bM0">
-                                                <rect key="frame" x="0.0" y="0.0" width="333" height="34"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Save" cornerStyle="capsule">
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" red="0.32156862749999998" green="0.84705882349999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="save:" destination="pGJ-d1-7jg" eventType="touchUpInside" id="DZN-Ss-xBf"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouo-fV-sdG">
-                                                <rect key="frame" x="0.0" y="42" width="333" height="34.333333333333343"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Logout" cornerStyle="capsule">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="logout:" destination="pGJ-d1-7jg" eventType="touchUpInside" id="1jp-9N-jlx"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xic-95-nwf">
-                                                <rect key="frame" x="0.0" y="84.333333333333258" width="333" height="34.333333333333343"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Delete" cornerStyle="capsule">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="Delete:" destination="pGJ-d1-7jg" eventType="touchUpInside" id="ueD-yn-rjz"/>
-                                                    <action selector="logout:" destination="pGJ-d1-7jg" eventType="touchUpInside" id="Hd8-fV-PhC"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Uyh-pK-gM4">
+                                                <rect key="frame" x="0.0" y="0.0" width="333" height="55.333333333333336"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuF-MA-bM0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="55.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Save" cornerStyle="capsule">
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="baseBackgroundColor" red="0.32156862749999998" green="0.84705882349999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="save:" destination="pGJ-d1-7jg" eventType="touchUpInside" id="DZN-Ss-xBf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouo-fV-sdG">
+                                                        <rect key="frame" x="113.66666666666666" y="0.0" width="105.66666666666666" height="55.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Logout" cornerStyle="capsule">
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="logout:" destination="pGJ-d1-7jg" eventType="touchUpInside" id="1jp-9N-jlx"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xic-95-nwf">
+                                                        <rect key="frame" x="227.33333333333329" y="0.0" width="105.66666666666666" height="55.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Delete" cornerStyle="capsule">
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="Delete:" destination="pGJ-d1-7jg" eventType="touchUpInside" id="ueD-yn-rjz"/>
+                                                            <action selector="logout:" destination="pGJ-d1-7jg" eventType="touchUpInside" id="Hd8-fV-PhC"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhl-GA-6uj">
-                                        <rect key="frame" x="0.0" y="674" width="333" height="118"/>
+                                        <rect key="frame" x="0.0" y="610.66666666666663" width="333" height="181.33333333333337"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1183,7 +1188,7 @@
                                 <constraints>
                                     <constraint firstItem="RTh-cg-5Fv" firstAttribute="height" secondItem="Tpj-QK-70j" secondAttribute="height" multiplier="0.1" id="24i-Ur-7JQ"/>
                                     <constraint firstItem="A0d-Zk-GCs" firstAttribute="height" secondItem="Tpj-QK-70j" secondAttribute="height" multiplier="0.3" id="E59-8P-qcU"/>
-                                    <constraint firstItem="QIo-9v-K3x" firstAttribute="height" secondItem="Tpj-QK-70j" secondAttribute="height" multiplier="0.15" id="JlX-gD-khf"/>
+                                    <constraint firstItem="QIo-9v-K3x" firstAttribute="height" secondItem="Tpj-QK-70j" secondAttribute="height" multiplier="0.07" id="JlX-gD-khf"/>
                                     <constraint firstItem="PRa-as-JeN" firstAttribute="height" secondItem="Tpj-QK-70j" secondAttribute="height" multiplier="0.1" id="LqI-iO-bvb"/>
                                     <constraint firstItem="wPL-3j-Bvo" firstAttribute="height" secondItem="Tpj-QK-70j" secondAttribute="height" multiplier="0.1" id="qyx-41-ZKo"/>
                                 </constraints>
@@ -1240,7 +1245,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
