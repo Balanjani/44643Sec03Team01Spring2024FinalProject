@@ -33,17 +33,17 @@
                     </view>
                     <connections>
                         <outlet property="launchLAV" destination="hn4-uH-pgk" id="8NT-WN-JEQ"/>
-                        <segue destination="JbV-3e-OeB" kind="show" identifier="lottietologin" id="tIT-Lc-esH"/>
+                        <segue destination="JbV-3e-OeB" kind="show" identifier="lottietologin" id="c3N-CF-FKP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T7B-0v-g6J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1279" y="9"/>
+            <point key="canvasLocation" x="866" y="-11"/>
         </scene>
         <!--Munchmap-->
         <scene sceneID="kH7-LO-iBK">
             <objects>
-                <viewController modalPresentationStyle="overFullScreen" id="JbV-3e-OeB" customClass="Munchmap" customModule="MunchMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="JbV-3e-OeB" customClass="Munchmap" customModule="MunchMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DPW-Yr-XCr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1021,7 +1021,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdO-OW-5vt">
                                         <rect key="frame" x="0.0" y="673" width="333" height="55.666666666666629"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Check" cornerStyle="capsule">
+                                        <buttonConfiguration key="configuration" style="filled" title="Save" cornerStyle="capsule">
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.32156862749999998" green="0.84705882349999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -1261,8 +1261,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oS2-kZ-nuj"/>
-        <segue reference="tIT-Lc-esH"/>
+        <segue reference="wKo-T3-htB"/>
+        <segue reference="c3N-CF-FKP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="104"/>
