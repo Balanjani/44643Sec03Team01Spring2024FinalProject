@@ -770,8 +770,8 @@
                         <outlet property="nameLBL" destination="s7K-9u-xPK" id="Kn0-Pd-NG7"/>
                         <outlet property="proteinLBL" destination="vd4-1D-jUE" id="T3A-PR-eLL"/>
                         <outlet property="remainingLBL" destination="f9m-1U-IqM" id="fp1-kB-iIU"/>
-                        <segue destination="sRy-Lz-iE5" kind="show" identifier="homeToDish" id="DcQ-Hu-8Bn"/>
                         <segue destination="pGJ-d1-7jg" kind="show" identifier="profile" id="ybF-HJ-w5b"/>
+                        <segue destination="WEB-qD-B6e" kind="show" identifier="homeToDish" id="DdE-Ht-1fR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2G3-aA-VeA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -956,20 +956,48 @@
             <objects>
                 <viewController modalPresentationStyle="overFullScreen" id="sRy-Lz-iE5" customClass="BreakfastVC" customModule="MunchMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zy5-Tw-oyo">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mIY-zN-v85" userLabel="BigContainerSV">
-                                <rect key="frame" x="30" y="30" width="333" height="792"/>
+                                <rect key="frame" x="30" y="86" width="333" height="726"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="yj3-0E-wgS">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="237.66666666666666"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EIh-cf-7Uy">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="29.666666666666668"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6C-ei-GMJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="29.666666666666668"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2e-Yj-mHK">
+                                                <rect key="frame" x="113.66666666666666" y="0.0" width="105.66666666666666" height="29.666666666666668"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSk-fU-2DK">
+                                                <rect key="frame" x="227.33333333333329" y="0.0" width="105.66666666666666" height="29.666666666666668"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="info.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="info:" destination="sRy-Lz-iE5" eventType="touchUpInside" id="jgc-d2-NTJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="WSk-fU-2DK" firstAttribute="height" secondItem="EIh-cf-7Uy" secondAttribute="height" multiplier="0.0472911" constant="28.138200183654742" id="ht1-1Z-Xww"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="yj3-0E-wgS">
+                                        <rect key="frame" x="0.0" y="37.666666666666671" width="333" height="217.66666666666663"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="q6m-y3-WgR" userLabel="MealSV">
-                                        <rect key="frame" x="0.0" y="245.66666666666671" width="333" height="332.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="263.33333333333337" width="333" height="264.33333333333337"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGb-5d-pYE">
-                                                <rect key="frame" x="0.0" y="0.0" width="333" height="77"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="333" height="60"/>
                                                 <color key="tintColor" red="0.32156862749999998" green="0.84705882349999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Breakfast">
@@ -977,7 +1005,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ars-aa-iDr">
-                                                <rect key="frame" x="0.0" y="85" width="333" height="77"/>
+                                                <rect key="frame" x="0.0" y="68" width="333" height="60.333333333333343"/>
                                                 <color key="tintColor" red="0.32156862749999998" green="0.84705882349999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Lunch">
@@ -985,7 +1013,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lu-ww-y6T">
-                                                <rect key="frame" x="0.0" y="170" width="333" height="77.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="136.33333333333337" width="333" height="60"/>
                                                 <color key="tintColor" red="0.32156862749999998" green="0.84705882349999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Snacks">
@@ -993,7 +1021,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LP3-Jk-Kou">
-                                                <rect key="frame" x="0.0" y="255.33333333333331" width="333" height="77"/>
+                                                <rect key="frame" x="0.0" y="204.33333333333331" width="333" height="60"/>
                                                 <color key="tintColor" red="0.32156862749999998" green="0.84705882349999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Dinner">
@@ -1003,16 +1031,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HLr-jL-9vm" userLabel="DishnameSV">
-                                        <rect key="frame" x="0.0" y="586" width="333" height="79"/>
+                                        <rect key="frame" x="0.0" y="535.66666666666663" width="333" height="72.666666666666629"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dish Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meb-o3-aS0">
-                                                <rect key="frame" x="0.0" y="0.0" width="333" height="35.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="333" height="32.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kGf-jm-mLy" userLabel="DishTF">
-                                                <rect key="frame" x="0.0" y="43.666666666666629" width="333" height="35.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="40.333333333333371" width="333" height="32.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -1020,7 +1048,7 @@
                                         <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdO-OW-5vt">
-                                        <rect key="frame" x="0.0" y="673" width="333" height="55.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="616.33333333333337" width="333" height="51"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save" cornerStyle="capsule">
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1031,7 +1059,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88G-ji-dIy">
-                                        <rect key="frame" x="0.0" y="736.66666666666663" width="333" height="55.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="675.33333333333337" width="333" height="50.666666666666629"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="cancel"/>
                                         <connections>
@@ -1066,12 +1094,206 @@
                         <outlet property="LunchOL" destination="ars-aa-iDr" id="TEC-XH-9fG"/>
                         <outlet property="SaveOL" destination="JdO-OW-5vt" id="VXZ-0H-0mV"/>
                         <outlet property="SnacksOL" destination="6lu-ww-y6T" id="NHF-fZ-Ves"/>
-                        <segue destination="QdX-Ke-SB9" kind="show" identifier="backtouser" id="wKo-T3-htB"/>
+                        <segue destination="QdX-Ke-SB9" kind="showDetail" identifier="backtouser" id="wKo-T3-htB"/>
+                        <segue destination="QMl-Ev-LkM" kind="show" identifier="Infoview" id="6Oq-7A-AjV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fg-x4-9Z5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3886" y="1277"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ddD-uV-ttL">
+            <objects>
+                <navigationController id="WEB-qD-B6e" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XdM-uL-xg9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8yP-52-2BN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sRy-Lz-iE5" kind="relationship" relationship="rootViewController" id="CDF-Wh-2u1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVK-Zd-tCQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2894" y="2144"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Zmi-mw-o2r">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="QMl-Ev-LkM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="riv-3q-9IQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jhd-zi-hsA">
+                                <rect key="frame" x="0.0" y="56" width="393" height="786"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Quinoa - Protein: 4 grams, Calories: 120, Measurement: 100 grams, Typical Serving: 1/2 cup cooked = 4 grams protein
+
+Lentils - Protein: 9 grams, Calories: 116, Measurement: 100 grams, Typical Serving: 1/2 cup cooked = 9 grams protein
+
+Chickpeas - Protein: 8 grams, Calories: 164, Measurement: 100 grams, Typical Serving: 1/2 cup cooked = 7 grams protein
+
+Black beans - Protein: 8 grams, Calories: 132, Measurement: 100 grams, Typical Serving: 1/2 cup cooked = 8 grams protein
+
+Oats - Protein: 17 grams, Calories: 389, Measurement: 100 grams, Typical Serving: 1/2 cup dry = 7 grams protein
+
+Milk (2%) - Protein: 3.3 grams, Calories: 50, Measurement: 100 grams, Typical Serving: 1 cup = 8 grams protein
+
+Cheese (cheddar) - Protein: 25 grams, Calories: 402, Measurement: 100 grams, Typical Serving: 1 slice = 7 grams protein
+
+Cottage cheese (low-fat) - Protein: 12 grams, Calories: 72, Measurement: 100 grams, Typical Serving: 1/2 cup = 14 grams protein
+
+Yogurt (Greek, plain) - Protein: 10 grams, Calories: 59, Measurement: 100 grams, Typical Serving: 1 cup = 23 grams protein
+
+Soy milk - Protein: 3.3 grams, Calories: 33, Measurement: 100 grams, Typical Serving: 1 cup = 7 grams protein
+
+Seitan - Protein: 75 grams, Calories: 370, Measurement: 100 grams, Typical Serving: 3 ounces = 20 grams protein
+
+Wheat germ - Protein: 23 grams, Calories: 360, Measurement: 100 grams, Typical Serving: 2 tablespoons = 4 grams protein
+
+Canned tuna - Protein: 29 grams, Calories: 116, Measurement: 100 grams, Typical Serving: 1 can (6 ounces) = 34 grams protein
+
+Turkey bacon - Protein: 15 grams, Calories: 226, Measurement: 100 grams, Typical Serving: 1 slice = 3 grams protein
+
+Soybeans - Protein: 36 grams, Calories: 446, Measurement: 100 grams, Typical Serving: 1/2 cup cooked = 14 grams protein
+
+Pork sausage (cooked) - Protein: 13 grams, Calories: 221, Measurement: 100 grams, Typical Serving: 1 link = 8 grams protein
+
+Ground chicken (cooked) - Protein: 28 grams, Calories: 165, Measurement: 100 grams, Typical Serving: 3 ounces = 26 grams protein
+
+Ground turkey (cooked) - Protein: 20 grams, Calories: 219, Measurement: 100 grams, Typical Serving: 3 ounces = 21 grams protein
+
+Beef jerky - Protein: 33 grams, Calories: 410, Measurement: 100 grams, Typical Serving: 1 ounce = 9 grams protein
+
+Spinach - Protein: 2.9 grams, Calories: 23, Measurement: 100 grams, Typical Serving: 1 cup cooked = 5 grams protein
+
+Broccoli - Protein: 2.8 grams, Calories: 34, Measurement: 100 grams, Typical Serving: 1 cup chopped = 2.6 grams protein
+
+Asparagus - Protein: 2.2 grams, Calories: 20, Measurement: 100 grams, Typical Serving: 1 cup chopped = 2.9 grams protein
+
+Artichokes - Protein: 3.3 grams, Calories: 47, Measurement: 100 grams, Typical Serving: 1 artichoke = 4.2 grams protein
+
+Brussels sprouts - Protein: 3.4 grams, Calories: 43, Measurement: 100 grams, Typical Serving: 1 cup cooked = 6 grams protein
+
+Kale - Protein: 4.3 grams, Calories: 35, Measurement: 100 grams, Typical Serving: 1 cup chopped = 2.9 grams protein
+
+Bell peppers - Protein: 0.9 grams, Calories: 31, Measurement: 100 grams, Typical Serving: 1 medium pepper = 1.3 grams protein
+
+Carrots - Protein: 0.9 grams, Calories: 41, Measurement: 100 grams, Typical Serving: 1 cup chopped = 1.2 grams protein
+
+Cauliflower - Protein: 1.9 grams, Calories: 25, Measurement: 100 grams, Typical Serving: 1 cup chopped = 2 grams protein
+
+Cucumber - Protein: 0.7 grams, Calories: 16, Measurement: 100 grams, Typical Serving: 1 cup sliced = 0.8 grams protein
+
+Tomatoes - Protein: 0.9 grams, Calories: 18, Measurement: 100 grams, Typical Serving: 1 medium tomato = 1.1 grams protein
+
+Zucchini - Protein: 1.2 grams, Calories: 17, Measurement: 100 grams, Typical Serving: 1 cup chopped = 1.4 grams protein
+
+Onions - Protein: 1.1 grams, Calories: 40, Measurement: 100 grams, Typical Serving: 1 medium onion = 1.3 grams protein
+
+Garlic - Protein: 6.4 grams, Calories: 149, Measurement: 100 grams, Typical Serving: 1 clove = 0.6 grams protein
+
+Ginger - Protein: 1.8 grams, Calories: 80, Measurement: 100 grams, Typical Serving: 1 tablespoon grated = 0.1 grams protein
+
+Potatoes - Protein: 2 grams, Calories: 77, Measurement: 100 grams, Typical Serving: 1 medium potato = 4 grams protein
+
+Sweet potatoes - Protein: 1.6 grams, Calories: 86, Measurement: 100 grams, Typical Serving: 1 medium sweet potato = 2 grams protein
+
+Pumpkin - Protein: 1 gram, Calories: 26, Measurement: 100 grams, Typical Serving: 1 cup mashed = 2 grams protein
+
+Butternut squash - Protein: 1 gram, Calories: 45, Measurement: 100 grams, Typical Serving: 1 cup cubed = 1.8 grams protein
+
+Acorn squash - Protein: 0.7 grams, Calories: 40, Measurement: 100 grams, Typical Serving: 1 cup cubed = 1.2 grams protein
+
+Beets - Protein: 1.6 grams, Calories: 43, Measurement: 100 grams, Typical Serving: 1 cup sliced = 1.6 grams protein
+
+Eggplant - Protein: 0.8 grams, Calories: 25, Measurement: 100 grams, Typical Serving: 1 cup diced = 0.8 grams protein
+
+Celery - Protein: 0.7 grams, Calories: 16, Measurement: 100 grams, Typical Serving: 1 cup chopped = 0.8 grams protein
+
+Mushrooms - Protein: 3.1 grams, Calories: 22, Measurement: 100 grams, Typical Serving: 1 cup sliced = 3.9 grams protein
+Beef liver - Protein: 29 grams, Calories: 175, Measurement: 100 grams, Typical Serving: 3 ounces = 23 grams protein
+
+Pork ribs (lean, cooked) - Protein: 25 grams, Calories: 318, Measurement: 100 grams, Typical Serving: 3 ounces = 22 grams protein
+
+Salami - Protein: 25 grams, Calories: 414, Measurement: 100 grams, Typical Serving: 3 slices = 9 grams protein
+
+Caviar - Protein: 24 grams, Calories: 264, Measurement: 100 grams, Typical Serving: 1 tablespoon = 4 grams protein
+
+Sardines (canned in oil) - Protein: 24 grams, Calories: 208, Measurement: 100 grams, Typical Serving: 1 can (3.75 ounces) = 22 grams protein
+
+Anchovies (canned in oil) - Protein: 24 grams, Calories: 210, Measurement: 100 grams, Typical Serving: 1 can (2 ounces) = 13 grams protein
+
+Mussels - Protein: 24 grams, Calories: 172, Measurement: 100 grams, Typical Serving: 3 ounces = 20 grams protein
+
+Octopus (cooked) - Protein: 25 grams, Calories: 164, Measurement: 100 grams, Typical Serving: 3 ounces = 17 grams protein
+
+Crab (cooked) - Protein: 19 grams, Calories: 84, Measurement: 100 grams, Typical Serving: 3 ounces = 18 grams protein
+
+Lobster (cooked) - Protein: 20 grams, Calories: 98, Measurement: 100 grams, Typical Serving: 3 ounces = 17 grams protein
+
+Oysters - Protein: 9 grams, Calories: 68, Measurement: 100 grams, Typical Serving: 3 ounces = 16 grams protein
+
+Clams - Protein: 14 grams, Calories: 86, Measurement: 100 grams, Typical Serving: 3 ounces = 22 grams protein
+
+Pork belly (cooked) - Protein: 25 grams, Calories: 518, Measurement: 100 grams, Typical Serving: 3 ounces = 24 grams protein
+
+Duck breast (cooked) - Protein: 30 grams, Calories: 337, Measurement: 100 grams, Typical Serving: 3 ounces = 25 grams protein
+
+Goose - Protein: 29 grams, Calories: 305, Measurement: 100 grams, Typical Serving: 3 ounces = 27 grams protein
+
+Pheasant (cooked) - Protein: 29 grams, Calories: 189, Measurement: 100 grams, Typical Serving: 3 ounces = 27 grams protein
+
+Quail (cooked) - Protein: 25 grams, Calories: 158, Measurement: 100 grams, Typical Serving: 1 quail = 25 grams protein
+
+Rabbit (cooked) - Protein: 21 grams, Calories: 173, Measurement: 100 grams, Typical Serving: 3 ounces = 22 grams protein
+
+Venison (cooked) - Protein: 30 grams, Calories: 158, Measurement: 100 grams, Typical Serving: 3 ounces = 30 grams protein
+
+Elk (cooked) - Protein: 30 grams, Calories: 158, Measurement: 100 grams, Typical Serving: 3 ounces = 30 grams protein
+
+Wild boar (cooked) - Protein: 30 grams, Calories: 158, Measurement: 100 grams, Typical Serving: 3 ounces = 30 grams protein
+
+Kangaroo (cooked) - Protein: 29 grams, Calories: 100, Measurement: 100 grams, Typical Serving: 3 ounces = 30 grams protein
+
+Emu (cooked) - Protein: 22 grams, Calories: 130, Measurement: 100 grams, Typical Serving: 3 ounces = 25 grams protein
+
+Bison (cooked) - Protein: 29 grams, Calories: 158, Measurement: 100 grams, Typical Serving: 3 ounces = 30 grams protein
+
+Camel (cooked) - Protein: 35 grams, Calories: 158, Measurement: 100 grams, Typical Serving: 3 ounces = 35 grams protein
+
+Horse (cooked) - Protein: 25 grams, Calories: 175, Measurement: 100 grams, Typical Serving: 3 ounces = 30 grams protein
+
+Yak (cooked) - Protein: 28 grams, Calories: 158, Measurement: 100 grams, Typical Serving: 3 ounces = 30 grams protein
+
+Buffalo (cooked) - Protein: 29 grams, Calories: 158, Measurement: 100 grams, Typical Serving: 3 ounces = 30 grams protein
+
+Boar (cooked) - Protein: 29 grams, Calories: 158, Measurement: 100 grams, Typical Serving: 3 ounces = 30 grams protein
+
+Ostrich (cooked) - Protein: 29 grams, Calories: 158, Measurement: 100 grams, Typical Serving: 3 ounces = 30 grams protein
+</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YaT-u6-4tJ"/>
+                        <color key="backgroundColor" red="0.0" green="0.28235294119999998" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YaT-u6-4tJ" firstAttribute="trailing" secondItem="Jhd-zi-hsA" secondAttribute="trailing" id="6qb-ae-pFJ"/>
+                            <constraint firstItem="Jhd-zi-hsA" firstAttribute="leading" secondItem="YaT-u6-4tJ" secondAttribute="leading" id="8rE-8n-IrT"/>
+                            <constraint firstItem="Jhd-zi-hsA" firstAttribute="top" secondItem="YaT-u6-4tJ" secondAttribute="top" id="DXd-8V-55O"/>
+                            <constraint firstItem="YaT-u6-4tJ" firstAttribute="bottom" secondItem="Jhd-zi-hsA" secondAttribute="bottom" id="jxl-X2-sa0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DM9-ID-dsb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nzN-tb-SBr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4405" y="2096"/>
         </scene>
         <!--ProfileVC-->
         <scene sceneID="vP2-iX-7CR">
@@ -1262,11 +1484,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oS2-kZ-nuj"/>
-        <segue reference="d3V-nD-Jh4"/>
+        <segue reference="wKo-T3-htB"/>
+        <segue reference="c3N-CF-FKP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="104"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="123"/>
         <image name="logo" width="494" height="505"/>
         <image name="profile" width="102" height="102"/>
         <systemColor name="labelColor">
@@ -1276,7 +1499,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

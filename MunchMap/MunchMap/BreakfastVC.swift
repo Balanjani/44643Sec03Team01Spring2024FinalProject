@@ -113,6 +113,9 @@ class BreakfastVC: UIViewController {
         performSegue(withIdentifier: "backtouser", sender: self)
     }
     
+    @IBAction func info(_ sender: Any) {
+        performSegue(withIdentifier: "Infoview", sender: self)
+    }
     
     /*
      // MARK: - Navigation

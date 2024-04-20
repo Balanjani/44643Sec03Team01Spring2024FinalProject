@@ -122,8 +122,9 @@ class calorieProgressVC: UIViewController, selectDishDelegate, caloriesDelegate{
         
         if segue.identifier == "homeToDish" {
             
-            let vc = segue.destination as! BreakfastVC
-            vc.delegate = self
+            let navVC = segue.destination as! UINavigationController
+            let vc = navVC.topViewController as! BreakfastVC
+                vc.delegate = self
             vc.selectedButton = buttonTag
         }else if segue.identifier == "profile" {
             
