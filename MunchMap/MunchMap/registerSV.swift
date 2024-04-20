@@ -152,6 +152,9 @@ class registerSV: UIViewController {
         self.present(alertController, animated: true)
     }
     
+    @IBAction func Cancel(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "cancel", sender: sender)
+    }
     
     /*
      // MARK: - Navigation

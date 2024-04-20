@@ -31,6 +31,7 @@
                             <constraint firstItem="wM8-KA-vDp" firstAttribute="bottom" secondItem="hn4-uH-pgk" secondAttribute="bottom" id="pMR-gS-Tx7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2XO-ii-TYY"/>
                     <connections>
                         <outlet property="launchLAV" destination="hn4-uH-pgk" id="8NT-WN-JEQ"/>
                         <segue destination="JbV-3e-OeB" kind="show" identifier="lottietologin" id="c3N-CF-FKP"/>
@@ -912,7 +913,8 @@
                                                             <color key="baseBackgroundColor" red="0.32156862749999998" green="0.84705882349999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="cancel:" destination="0CS-dx-7Tf" eventType="touchUpInside" id="gAX-gN-aYS"/>
+                                                            <action selector="Cancel:" destination="0CS-dx-7Tf" eventType="touchUpInside" id="FvU-Zt-hjH"/>
+                                                            <segue destination="JbV-3e-OeB" kind="show" identifier="cancel" id="d3V-nD-Jh4"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -943,7 +945,6 @@
                         <outlet property="passwordTF" destination="MWo-Xv-O8h" id="OTk-KQ-n47"/>
                         <outlet property="phoneNumberTF" destination="qun-pC-aDP" id="wqc-DN-qmm"/>
                         <segue destination="qZn-IN-AOr" kind="show" identifier="registerToInfo" id="g0a-6B-ns7"/>
-                        <segue destination="JbV-3e-OeB" kind="show" identifier="registerToLogin" id="UVK-TJ-y6Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i0F-iO-1rR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1261,8 +1262,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wKo-T3-htB"/>
-        <segue reference="c3N-CF-FKP"/>
+        <segue reference="oS2-kZ-nuj"/>
+        <segue reference="d3V-nD-Jh4"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="104"/>
