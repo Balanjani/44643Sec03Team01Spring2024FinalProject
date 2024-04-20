@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import AudioToolbox
 
 protocol caloriesDelegate {
     
@@ -41,13 +42,13 @@ class ProfileVC: UIViewController {
     
     
     @IBAction func back(_ sender: Any) {
-        
+        AudioServicesPlaySystemSound(1306)
         
         self.dismiss(animated: true)
     }
     
     @IBAction func save(_ sender: Any) {
-        
+        AudioServicesPlaySystemSound(1306)
         guard let calories = caloriesTF.text, !calories.isEmpty else {
             // If any of the fields are empty, display an alert or handle it accordingly
             let alertController = UIAlertController(title: "Error", message: "Please fill in all fields", preferredStyle: .alert)
@@ -86,7 +87,7 @@ class ProfileVC: UIViewController {
     
     
     @IBAction func logout(_ sender: Any) {
-        
+        AudioServicesPlaySystemSound(1306)
         do {
             
             try Auth.auth().signOut()
@@ -97,6 +98,7 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func Delete(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1306)
             let user = Auth.auth().currentUser
             
             user?.delete { error in

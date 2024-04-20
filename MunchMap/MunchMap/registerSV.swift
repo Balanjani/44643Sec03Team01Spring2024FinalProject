@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import SVProgressHUD
-
+import AudioToolbox
 
 class registerSV: UIViewController {
     
@@ -91,6 +91,7 @@ class registerSV: UIViewController {
     }
     
     @IBAction func SignupBTN(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1306)
         if let email = gmailTF.text, let phonenumber = phoneNumberTF.text, let password = passwordTF.text, let firstname = firstNameTF.text, let lastname = lastNameTF.text, let confirmPassword = confrimPasswordTF.text {
             if firstname == ""{
                 openAlert(title: "Alert", message: "Please enter firstname", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
@@ -154,6 +155,7 @@ class registerSV: UIViewController {
     
     @IBAction func Cancel(_ sender: UIButton) {
         self.performSegue(withIdentifier: "cancel", sender: sender)
+        AudioServicesPlaySystemSound(1306)
     }
     
     /*

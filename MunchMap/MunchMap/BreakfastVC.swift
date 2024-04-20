@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import AudioToolbox
 
 protocol selectDishDelegate {
     func didDishSelected(dish: String) -> Void
@@ -97,6 +97,7 @@ class BreakfastVC: UIViewController {
     
     
     @IBAction func Calculate(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1306)
         guard let dish = DishTFOL.text, !dish.isEmpty else {
             let alertController = UIAlertController(title: "Error", message: "Please fill in all fields", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -111,10 +112,12 @@ class BreakfastVC: UIViewController {
     }
     @IBAction func cancel(_ sender: UIButton) {
         performSegue(withIdentifier: "backtouser", sender: self)
+        AudioServicesPlaySystemSound(1306)
     }
     
     @IBAction func info(_ sender: Any) {
         performSegue(withIdentifier: "Infoview", sender: self)
+        AudioServicesPlaySystemSound(1306)
     }
     
     /*

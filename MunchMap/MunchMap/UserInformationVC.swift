@@ -7,6 +7,7 @@
 
 import UIKit
 import SVProgressHUD
+import AudioToolbox
 
 class UserInformationVC: UIViewController, UITextFieldDelegate,UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -50,6 +51,7 @@ class UserInformationVC: UIViewController, UITextFieldDelegate,UIPickerViewDataS
     
     
     @IBAction func submitBTN(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1306)
         guard let age = AgeTF.text, !age.isEmpty,
               let height = HeightTF.text, !height.isEmpty,
               let weight = WeightTF.text, !weight.isEmpty else {

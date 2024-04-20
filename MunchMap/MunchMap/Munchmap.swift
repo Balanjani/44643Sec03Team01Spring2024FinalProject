@@ -11,6 +11,7 @@ import Foundation
 import SwiftUI
 import FirebaseAuth
 import SVProgressHUD
+import AudioToolbox
 
 class Munchmap: UIViewController {
     
@@ -60,6 +61,7 @@ class Munchmap: UIViewController {
         
     }
     @IBAction func loginMpBTN(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1306)
         
         guard let email = usernameTF.text, !email.isEmpty,
               let password = passwordTF.text, !password.isEmpty else {
@@ -68,6 +70,7 @@ class Munchmap: UIViewController {
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
+            AudioServicesPlaySystemSound(1306)
             return
         }
         
@@ -103,9 +106,11 @@ class Munchmap: UIViewController {
     
     @IBAction func forgotPsdMpBTN(_ sender: UIButton) {
         performSegue(withIdentifier: "logintoforgotpassword", sender: self)
+        AudioServicesPlaySystemSound(1306)
     }
     
     @IBAction func signupRegMpBTN(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1306)
     }
     
     @IBAction func submitUISBTN(_ sender: UIButton) {

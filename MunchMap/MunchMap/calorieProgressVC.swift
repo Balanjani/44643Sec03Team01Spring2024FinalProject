@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import SVProgressHUD
+import AudioToolbox
 
 class calorieProgressVC: UIViewController, selectDishDelegate, caloriesDelegate{
     func didUpdated() {
@@ -57,6 +58,7 @@ class calorieProgressVC: UIViewController, selectDishDelegate, caloriesDelegate{
     
     @IBAction func profile(_ sender: UIButton) {
         self.performSegue(withIdentifier: "profile", sender: self)
+        AudioServicesPlaySystemSound(1306)
     }
     
     func getDailyData() -> Void {
@@ -136,6 +138,7 @@ class calorieProgressVC: UIViewController, selectDishDelegate, caloriesDelegate{
     @IBAction func add(_ sender: UIButton) {
         buttonTag = sender.tag
         self.performSegue(withIdentifier: "homeToDish", sender: self)
+        AudioServicesPlaySystemSound(1306)
     }
     
     func fetchData(foodName: String) {
@@ -247,6 +250,7 @@ class calorieProgressVC: UIViewController, selectDishDelegate, caloriesDelegate{
     }
     
     @IBAction func ResetBTN(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1306)
         let params = ["calories_eaten": 0,
                       "fat": 0,
                       "carb": 0,
